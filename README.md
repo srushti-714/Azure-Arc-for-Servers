@@ -219,44 +219,45 @@ Security best practices specify that a user should be given the lowest permissio
 
    ![](./images/azure-arc-1221.png)
    
-   ```
+
+```
 {
-    "Actions": [
-        "Microsoft.Authorization/policyassignments/read",
-        "Microsoft.Authorization/policydefinitions/read",
-        "Microsoft.Authorization/policysetdefinitions/read",
-        "Microsoft.Compute/virtualMachines/read",
-        "Microsoft.HybridCompute/machines/read",
-        "Microsoft.PolicyInsights/*/read"
-    ],
-    "AssignableScopes": [
-        "/subscriptions/<Subscription Id>/resourceGroups/<resourceGroupsName>"
-    ],
-    "Description": "Can audit server compliance.",
-    "Name": "Server Auditor" 
+              "Actions": [
+                           "Microsoft.Authorization/policyassignments/read",
+                           "Microsoft.Authorization/policydefinitions/read",
+                           "Microsoft.Authorization/policysetdefinitions/read",
+                           "Microsoft.Compute/virtualMachines/read",
+                           "Microsoft.HybridCompute/machines/read",
+                           "Microsoft.PolicyInsights/*/read"
+                          ],
+                "AssignableScopes": [
+                                    "/subscriptions/<Subscription Id>/resourceGroups/<resourceGroupsName>"
+                                     ],
+                "Description": "Can audit server compliance.",
+                "Name": "Server Auditor" 
+}
+```
 
-}```
-
-2.	Once you save the file, it will look like below.
+2. Once you save the file, it will look like below.
 	
    ![](./images/azure-arc-1222.png)
 
 3. Run the PowerShell commands to create a role definition.
  
  ```
- #Import Creds
- CD C:\LabFiles
- $credsfilepath = ".\creds.txt"
- $creds = Get-Content $credsfilepath | Out-String | ConvertFrom-StringData
+                    #Import Creds
+                    CD C:\LabFiles
+                    $credsfilepath = ".\creds.txt"
+                    $creds = Get-Content $credsfilepath | Out-String | ConvertFrom-StringData
 
- $AppID = "$($creds.AppID)"
- $AppSecret = "$($creds.AppSecret)"
- $TenantID = "$($creds.TenantID)"
- $SubscriptionId = "$($creds.SubscriptionId)"
- $passwd = ConvertTo-SecureString $AppSecret -AsPlainText -Force
- $pscredential = New-Object System.Management.Automation.PSCredential($AppID, $passwd)
- Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
- New-AzRoleDefinition -InputFile .\ServerAuditor.json 
+                    $AppID = "$($creds.AppID)"
+                    $AppSecret = "$($creds.AppSecret)"
+                    $TenantID = "$($creds.TenantID)"
+                    $SubscriptionId = "$($creds.SubscriptionId)"
+                    $passwd = ConvertTo-SecureString $AppSecret -AsPlainText -Force
+                    $pscredential = New-Object System.Management.Automation.PSCredential($AppID, $passwd)
+                    Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
+                    New-AzRoleDefinition -InputFile .\ServerAuditor.json 
  ```
  
 
