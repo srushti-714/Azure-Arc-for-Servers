@@ -183,7 +183,7 @@ We will use the 2nd method to connect our windows machine to Azure.
 	.\ConnectWindowsServertoAzureArc.ps1 -WindowsServerIP $ip
 ```
    
-   ![](./images/azure-arc-1785.png)
+   &nbsp;&nbsp;![](./images/azure-arc-1785.png)
 
 3. ConnectWindowsServertoAzureArc.ps1 is getting following values from C:\LabFiles\creds.txt file and storing that to variables. You can review the script to understand it in depth.
      •	Azure service principle ID
@@ -203,7 +203,7 @@ In this task, we will connect the Linux machine to Azure Arc.
 	$ip = Read-Host -Prompt 'IP Address of Linux machine'
 	.\ArcAgentLinux.bat $ip
 ```
-   ![](./images/azure-arc-1331.png)
+   &nbsp;&nbsp;![](./images/azure-arc-1331.png)
 
 2. These commands will open a putty session and login to the Linux machine and run the Azure Arc connect commands automatically. Once the machine is onboarded to Azure you can see the following message in putty terminal:
 info msg= “Successfully Onboarded Resource to Azure”
@@ -261,7 +261,7 @@ Security best practices specify that a user should be given the lowest permissio
  ```
  
 
-   ![](./images/azure-arc-1225.png)
+   &nbsp;&nbsp;![](./images/azure-arc-1225.png)
 
 4. Now, go to your resource group in Azure portal and click on **Access control (IAM)** and then click on **+ Add** button to assign the role to self which you just created.
 
@@ -343,7 +343,7 @@ a. Click on the **ellipses** …to the right to select all options to include th
 
 In the next window at the bottom you will see a blue circle beside **Evaluating**. When it is successful and completed, the circle will turn green and it will say **Complete**. NOTE: if you had many ARC servers, you could evaluate the all at once but changing the scope to select one of more locations or all within a resource group.
 
-    ![](./images/azure-arc-3336.png)
+   &nbsp;![](./images/azure-arc-3336.png)
 
 
 Optional initiatives to try… repeat the steps above to test some other policies such as:
