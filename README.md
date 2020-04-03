@@ -30,101 +30,101 @@ Table of Contents
 In this exercise, you will walk through some of the Azure Governance capabilities including Azure Activity Logs, Resource tags and policies. In the first exercise we’ll be trying out these capabilities with Azure resources and then extend to Azure Arc later during the lab.  
 ## Task 1: Login to Azure Portal
 In this task, you will login to Azure using the lab credentials and browse through Azure Portal.
-1.	Navigate to  Azure Portal.
+1.Navigate to  Azure Portal.
 
-	![](./images/azurePortal.png)
+  ![](./images/azurePortal.png)
 
-2.	Login with Azure credentials Username and Password shown on Environment Details page. You can use copy icon to copy the values.
+2.Login with Azure credentials Username and Password shown on Environment Details page. You can use copy icon to copy the values.
 
- 	![](./images/AzureCredentials.png)
+  ![](./images/AzureCredentials.png)
 
-3.	Enter the Username value in **Email**, **phone** or **Skype** field, and select the **Next**. 
+3.Enter the Username value in **Email**, **phone** or **Skype** field, and select the **Next**. 
 
-	![](./images/logintoAzure.png)
+  ![](./images/logintoAzure.png)
 
-4.	Now, enter the **Password** value, and select **Sign in**.
+4.Now, enter the **Password** value, and select **Sign in**.
 
-  	![](./images/enterAzurePassword.png)
+  ![](./images/enterAzurePassword.png)
 
-5.	Once you select the Sign in and **Stay signed in?** popup will appear, select the **Yes** to continue.
+5.Once you select the Sign in and **Stay signed in?** popup will appear, select the **Yes** to continue.
  
-	![](./images/staySignInPopup.png)
+  ![](./images/staySignInPopup.png)
 
-6.	You will see Welcome to Microsoft Azure popup windows once you signed into Azure. Select **Maybe later**.
+6.You will see Welcome to Microsoft Azure popup windows once you signed into Azure. Select **Maybe later**.
  
-	![](./images/WelcomeToAzurePopup.png)
+  ![](./images/WelcomeToAzurePopup.png)
 	
 ## Task 2: Azure Activity Logs
 The Azure Activity Log provides insight into events that have occurred in Azure. In this task you will explore on Azure Activity Logs on the existing **resource group** in Azure. 
-1.	In your Azure portal, browse through the resource groups. From the navigate panel, select Resource groups.
+1.In your Azure portal, browse through the resource groups. From the navigate panel, select Resource groups.
 
- ![](./images/lunchResourceGroup.png)
+  ![](./images/lunchResourceGroup.png)
 
-2.	You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab
+2.You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab
 environment. Select **Azure-ARC-170523** from resource groups.
 
   ![](./images/azure-arc-170523.png) 
 
-3.	Now, select the Activity logs to check the activities of last few hours on this resource group.
+3.Now, select the Activity logs to check the activities of last few hours on this resource group.
  
   ![](./images/azure-arc-1705231.png)
 
-4.	Under Activity logs you can see *‘Write Azure Arc Machines’* action in **Succeeded8* state and this action is performed by ‘https://odl_user_sp_170523’. To check more details for this activity log, click on the activity log operation Name. You can go to the resource group overview and see one resource with resource type *‘Microsoft.HybridCompute’*.
+4.Under Activity logs you can see *‘Write Azure Arc Machines’* action in **Succeeded8* state and this action is performed by ‘https://odl_user_sp_170523’. To check more details for this activity log, click on the activity log operation Name. You can go to the resource group overview and see one resource with resource type *‘Microsoft.HybridCompute’*.
 
   ![](./images/microsoftHybrid2.png)
 
  
 ## Task 3: Manage Resources Tags
 You apply tags to your Azure resources, resource groups, and subscriptions to logically organize them into a taxonomy. Each tag consists of a name and a value pair. For example, you can apply the name "Environment" and the value "Production" to all the resources in production.
-1.	Basically, tags can be applied on Subscription, resource group and resources level. Wherever you want to apply the tag just click on that resource and from left menu blade click on the **Tag**.
-2.	In this task, we will apply Tag on resource group. Click on the Tag.
+1.Basically, tags can be applied on Subscription, resource group and resources level. Wherever you want to apply the tag just click on that resource and from left menu blade click on the **Tag**.
+2.In this task, we will apply Tag on resource group. Click on the Tag.
 
-   ![](./images/azure-arc-171289.png)
+  ![](./images/azure-arc-171289.png)
  
 
-3.	You will several **Tags** are already there; you can create new Tag, remove existing Tag and then Save them.
+3.You will several **Tags** are already there; you can create new Tag, remove existing Tag and then Save them.
 
-   ![](./images/azure-arc-1712891.png)
+  ![](./images/azure-arc-1712891.png)
         
 ## Task 4: Azure Policies
 Azure Policy is a service in Azure that you use to create, assign, and manage policies. These policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service level agreements. Azure Policy meets this need by evaluating your resources for non-compliance with assigned policies. All data stored by Azure Policy is encrypted at rest.
-1.	Go to your resource group and click on the **Policies** under **Settings**. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**
+1.Go to your resource group and click on the **Policies** under **Settings**. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**
 
 
-   ![](./images/azure-arc-1770.png)
+  ![](./images/azure-arc-1770.png)
 
 
-2.	On **Basics** tab, click on the three dot’s (ellipses) to select the existing policy definition.
+2.On **Basics** tab, click on the three dot’s (ellipses) to select the existing policy definition.
 
 
   ![](./images/azure-arc-1771.png)
  
 
-3.	Now, in **Search box** type **“Require a tag and its value on resource groups”** and click on the searched definition and then click on **Select**.
+3.Now, in **Search box** type **“Require a tag and its value on resource groups”** and click on the searched definition and then click on **Select**.
 
-   ![](./images/azure-arc-1772.png)
+  ![](./images/azure-arc-1772.png)
  
 
-4.	Now, click on next to move on parameters tab.
+4.Now, click on next to move on parameters tab.
 
-   ![](./images/azure-arc-1773.png)
+  ![](./images/azure-arc-1773.png)
  
 
-5.	Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
+5.Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
 	 • Tag Name: Environment
 	 • Tag Value: Lab
 
 
-    ![](./images/azure-arc-1775.png)
+  ![](./images/azure-arc-1775.png)
  
 
-6.	Leave all the values **default** on **Remediation** tab and click on the **Review + create**.
+6.Leave all the values **default** on **Remediation** tab and click on the **Review + create**.
 
-    ![](./images/azure-arc-1776.png)
+  ![](./images/azure-arc-1776.png)
 
-7.	On **Review + create** tab click on the **Create** to create the policy assignment.
+7.On **Review + create** tab click on the **Create** to create the policy assignment.
 
-    ![](./images/azure-arc-1777.png)
+  ![](./images/azure-arc-1777.png)
  
 ## Exercise 2: Getting started with Azure Arc
 In the provided lab environment, you would already have one Windows Server running on-prem in a Hyper-V machine connected through Arc. In this exercise, we’ll explore this pre-connected Azure Arc resources. 
