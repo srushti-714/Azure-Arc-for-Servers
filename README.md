@@ -392,6 +392,7 @@ Optional initiatives to try… repeat the steps above to test some other policie
    ![](./images/tag.png)
 
 5. After saving them they should look like this.&nbsp;&nbsp;
+
    ![](./images/azure-arc-4441.png)
 
 # Task 4: Activity Logs
