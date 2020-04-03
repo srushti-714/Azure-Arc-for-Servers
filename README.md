@@ -388,9 +388,10 @@ Optional initiatives to try… repeat the steps above to test some other policie
    ![](./images/azure-arc-3339.png)
 
 4. Create the following tags, for owner enter your Azure account unique id and then Save them
+   
+   ![](./images/tag.png)
 
-
-5. After saving them they should look like this
+5. After saving them they should look like this.&nbsp;&nbsp;
    ![](./images/azure-arc-4441.png)
 
 # Task 4: Activity Logs
