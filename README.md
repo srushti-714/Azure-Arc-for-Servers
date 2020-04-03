@@ -261,7 +261,7 @@ Security best practices specify that a user should be given the lowest permissio
  ```
  
 
-   &nbsp;&nbsp;![](./images/azure-arc-1225.png)
+   &nbsp;&nbsp;&nbsp;![](./images/azure-arc-1225.png)
 
 4. Now, go to your resource group in Azure portal and click on **Access control (IAM)** and then click on **+ Add** button to assign the role to self which you just created.
 
