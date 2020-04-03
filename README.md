@@ -218,7 +218,8 @@ Security best practices specify that a user should be given the lowest permissio
 1. Save the role definition as ServerAuditor.json to C:\LabFiles directory in ARCHOST VM. You can use Visual studio code or notepad to edit and save the file. Provide the Subscription Id and resourceGroupsName of your lab environment in following custom role definition. You can get the values on lab details page.
 
    ![](./images/azure-arc-1221.png)
-
+   
+   ```
 {
     "Actions": [
         "Microsoft.Authorization/policyassignments/read",
@@ -232,14 +233,17 @@ Security best practices specify that a user should be given the lowest permissio
         "/subscriptions/<Subscription Id>/resourceGroups/<resourceGroupsName>"
     ],
     "Description": "Can audit server compliance.",
-    "Name": "Server Auditor"
-}
-	2.	Once you save the file, it will look like below.
+    "Name": "Server Auditor" 
+
+}```
+
+2.	Once you save the file, it will look like below.
 	
    ![](./images/azure-arc-1222.png)
 
 3. Run the PowerShell commands to create a role definition.
  
+ ```
  #Import Creds
  CD C:\LabFiles
  $credsfilepath = ".\creds.txt"
@@ -253,6 +257,7 @@ Security best practices specify that a user should be given the lowest permissio
  $pscredential = New-Object System.Management.Automation.PSCredential($AppID, $passwd)
  Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
  New-AzRoleDefinition -InputFile .\ServerAuditor.json 
+ ```
  
 
    ![](./images/azure-arc-1225.png)
