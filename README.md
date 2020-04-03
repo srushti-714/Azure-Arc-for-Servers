@@ -368,7 +368,15 @@ Optional initiatives to try… repeat the steps above to test some other policie
 
 
 **Note**: If you find **winvm non-compliant** means time zone of winvm is different from the time zone you provided in policy. You can change the time zone of winvm using following script and after sometime you will see the winvm complaint state changed to **Compliant**
+```
+             $ap = "demo@pass123" 
 
+             $cred = New-Object -ArgumentList "Administrator",(ConvertTo-SecureString -AsPlainText -Force -String $ap) -    TypeName System.Management.Automation.PSCredential 
+
+             $ip = "192.168.0.5" 
+
+             Invoke-Command -ComputerName $ip -Credential $cred -ScriptBlock {Set-TimeZone -Id '(UTC) Coordinated Universal Time'} 
+```
 # Task 3: Tag your ARC server
 1. Open the Azure portal page. Click on this link to go to the Azure ARC machine(s) you have built
 2. Click on your machine that you want to tag
@@ -380,6 +388,7 @@ Optional initiatives to try… repeat the steps above to test some other policie
    ![](./images/azure-arc-3339.png)
 
 4. Create the following tags, for owner enter your Azure account unique id and then Save them
+
 
 5. After saving them they should look like this
    ![](./images/azure-arc-4441.png)
