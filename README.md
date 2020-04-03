@@ -198,13 +198,13 @@ We will use the 2nd method to connect our windows machine to Azure.
 After getting these values, it is creating pscredential to login in Azure PowerShell using service principle and then, creating a script block to run that block inside the Hyper-V machine. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARC-Host vm with computer name/private ip of WinVm.
 ## Task 3: Connect a Linux Virtual Machine to Arc
 In this task, we will connect the Linux machine to Azure Arc. 
-1.	Open windows PowerShell and run the following command and pass the Linux vm ip in prompt
+1. Open windows PowerShell and run the following command and pass the Linux vm ip in prompt
 ```
 	cd C:\LabFiles\
 	$ip = Read-Host -Prompt 'IP Address of Linux machine'
 	.\ArcAgentLinux.bat $ip
 ```
-  ![](./images/azure-arc-1331.png)
+   ![](./images/azure-arc-1331.png)
 
 2.	These commands will open a putty session and login to the Linux machine and run the Azure Arc connect commands automatically. Once the machine is onboarded to Azure you can see the following message in putty terminal:
 info msg= “Successfully Onboarded Resource to Azure”
