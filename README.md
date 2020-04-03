@@ -13,7 +13,7 @@ Table of Contents
    - [Task 2: Azure Activity Logs](#task-2-azure-activity-logs)
    - [Task 3: Manage Resources Tags](#task-3-manage-resources-tags)
    - [Task 4: Azure Policies](#task-4-azure-policies)
-   - [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc)
+##   [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc)
    - [Task 1: Browse through the Arc pre-connected machine in Azure Portal](#task-1-browse-through-the-arc-pre-connected-machine-in-azure-portal)
   ##   [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-with-arc)
    -   [Task 1: Login and become familiar with Hyper-V Infrastructure](#task-1-login-and-become-familiar-with-hyper-v-infrastructure)
