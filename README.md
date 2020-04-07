@@ -188,10 +188,10 @@ We will use the 2nd method to connect our **windows machine** to Azure.
    ![](./images/azure-arc-1785.png)
 
 3. **ConnectWindowsServertoAzureArc.ps1** is getting following values from ***C:\LabFiles\creds.txt*** file and storing that to **variables**. You can review the script to understand it in depth.
-  * Azure service principle ID     
-  * App Secret     
-  * Resource group name     
-  * Subscription and tenant id
+     * Azure service principle ID     
+     * App Secret     
+     * Resource group name     
+     * Subscription and tenant id
      
 After getting these values, it is creating **pscredential** to login in **Azure PowerShell** using service principle and then, creating a script block to run that block inside the **machines hosted on Hyper-V**. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARC-Host vm with computer name/private ip of WinVm.
 
