@@ -77,6 +77,9 @@ environment. Select **Azure-ARC-170523**.
 ## Task 3: Manage Resources Tags
 You apply tags to your Azure resources, resource groups, and subscriptions to logically organize them into a taxonomy. Each tag consists of a name and a value pair. For example, you can apply the name "**Environment**" and the value "**Production**" to all the resources in production.
 1. Basically, tags can be applied on **Subscription**, **resource group** and **resource** level. Wherever you want to apply the tag just click on that resource and from left menu blade click on the **Tag**.
+
+   ![](./images/azure-arc-171289.png)
+
 2. In this task, we will apply **Tag** on resource group. Click on the **Tag**.
 
    ![](./images/azure-arc-171289.png)
@@ -203,7 +206,7 @@ In this task, we will connect the Linux machine to Azure Arc.
    ![](./images/azure-arc-1331.png)
 
 2. These commands will open a putty session and login to the Linux machine and run the Azure Arc connect commands automatically. Once the machine is onboarded to Azure you can see the following message in putty terminal:
-info msg= “Successfully Onboarded Resource to Azure”
+**info msg= “Successfully Onboarded Resource to Azure”**
 
    ![](./images/azure-arc-1332.png)
  
