@@ -15,10 +15,10 @@ Table of Contents
    - [Task 4: Azure Policies](#task-4-azure-policies)
 ##   [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc)
    - [Task 1: Browse through the Arc pre-connected machine in Azure Portal](#task-1-browse-through-the-arc-pre-connected-machine-in-azure-portal)
-  ##   [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-with-arc)
+  ##   [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-arc)
    -   [Task 1: Login and become familiar with Hyper-V Infrastructure](#task-1-login-and-become-familiar-with-hyper-v-infrastructure)
-   -   [Task 2: Connect a Windows Server Virtual Machine to Arc](#task-2-connect-a-windows-server-virtual-machine-to-arc)
-   -   [Task 3: Connect a Linux Virtual Machine to Arc](#task-3-connect-a-linux-virtual-machine-to-arc)
+   -   [Task 2: Connect a Windows Server Virtual Machine to Azure Arc](#task-2-connect-a-windows-server-virtual-machine-to-azure-arc)
+   -   [Task 3: Connect a Linux Virtual Machine to Azure Arc](#task-3-connect-a-linux-virtual-machine-to-azure-arc)
   ##   [Exercise 4: Azure Governance for Arc Connected Machine](#exercise-4-azure-governance-for-arc-connected-machine)
    -   [Task 1: Apply Policy](#task-1-apply-policy)	
    -   [Task 2: Tag your ARC server](#task-2-tag-your-aRC-server)	
@@ -81,66 +81,62 @@ You apply tags to your Azure resources, resource groups, and subscriptions to lo
 
    ![](./images/azure-arc-171289.png)
  
-3. You will several **Tags** are already there; you can create new Tag, remove existing Tag and then Save them.
+3. You will see several **Tags** are already there; you can create new Tag, remove existing Tag and then Save them.
 
    ![](./images/azure-arc-1712891.png)
         
 ## Task 4: Azure Policies
-Azure Policy is a service in Azure that you use to create, assign, and manage policies. These policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service level agreements. Azure Policy meets this need by evaluating your resources for non-compliance with assigned policies. All data stored by Azure Policy is encrypted at rest.
-1. Go to your resource group and click on the **Policies** under **Settings**. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**
-
+Understanding how to create and manage policies in Azure is important for staying compliant with your corporate standards and service level agreements. In this tutorial, you learn to use Azure Policy to do some of the more common tasks related to creating, assigning, and managing policies across your organization, such as:
+  • Assign a policy to enforce a condition for resources you create in the future
+  • Create and assign an initiative definition to track compliance for multiple resources
+  • Resolve a non-compliant or denied resource
+  • Implement a new policy across an organization
+If you would like to assign a policy to identify the current compliance state of your existing resources, the QuickStart articles go over how to do so.
+1. Go to your resource group and click on the **Policies** under Settings. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**.
 
    ![](./images/azure-arc-1770.png)
 
-
 2. On **Basics** tab, click on the three dot’s (ellipses) to select the existing policy definition.
 
-
-   ![](./images/azure-arc-1771.png)
- 
+   ![](./images/azure-arc-1771.png) 
 
 3. Now, in **Search box** type **“Require a tag and its value on resource groups”** and click on the searched definition and then click on **Select**.
 
-   ![](./images/azure-arc-1772.png)
- 
+   ![](./images/azure-arc-1772.png) 
 
-4. Now, click on next to move on parameters tab.
+4. Now, click on **next** to move on parameters tab.
 
-   ![](./images/azure-arc-1773.png)
- 
+   ![](./images/azure-arc-1773.png) 
 
 5. Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
-	 • Tag Name: Environment
-	 • Tag Value: Lab
+     • Tag Name: **Environment**
+     • Tag Value: **Lab**
 
-
-   ![](./images/azure-arc-1775.png)
- 
+   ![](./images/azure-arc-1775.png) 
 
 6. Leave all the values **default** on **Remediation** tab and click on the **Review + create**.
 
    ![](./images/azure-arc-1776.png)
 
-7. On **Review + create** tab click on the **Create** to create the policy assignment.
+7. On **Review + create** tab click on the **Create** to create the **policy assignment**.
 
    ![](./images/azure-arc-1777.png)
  
 ## Exercise 2: Getting started with Azure Arc
-In the provided lab environment, you would already have one Windows Server running on-prem in a Hyper-V machine connected through Arc. In this exercise, we’ll explore this pre-connected Azure Arc resources. 
+In the provided lab environment, you would already have one Windows Server running on-prem in a **Hyper-V** machine connected through Arc. In this exercise, we’ll explore this **pre-connected** Azure Arc resources. 
 ## Task 1: Browse through the Arc pre-connected machine in Azure Portal.
 In this lab, two on-prem servers one **windows**, and **Linux** are pre-connected to Azure Arc and you can access the pre-connected server and play around those. 
-1. On Azure portal, search for Azure Arc from search box and then select the Machines – Azure Arc.
+1. On Azure portal, search for **Azure Arc** from search box and then select the **Machines – Azure Arc**.
 
    ![](./images/azure-arc-1778.png) 
- 
 
-2. You will see, following two machines are pre-connected
-	  • pre-connected-ubuntu
-	  • pre-connected-winvm
+2. You will see, following two machines are **pre-connected**
+     • **pre-connected-ubuntu**
+     • **pre-connected-winvm**
 
    ![](./images/azure-arc-1779.png)
 
-3. Click on one of the pre-connected machines.
+3. Click on one of the **pre-connected** machines.
 
    ![](./images/azure-arc-1991.png) 
 
