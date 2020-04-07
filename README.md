@@ -1,6 +1,5 @@
 ## Azure Arc: Hands-on Lab
 
-
 For customers who want to simplify complex and distributed environments across on-premises, edge and multi-cloud, Azure Arc enables deployment of Azure services anywhere and extends Azure management to any infrastructure.
 
 This hands-on lab introduces readers to Azure Arc and includes walkthrough of setup and management of connected scenarios through Azure Arc.
@@ -8,22 +7,24 @@ This hands-on lab introduces readers to Azure Arc and includes walkthrough of se
 Table of Contents
 =================	
 
-##   [Exercise 1: Getting started with Azure Governance](#exercise-1-getting-started-with-azure-governance)
+## [Exercise 1: Getting started with Azure Governance](#exercise-1-getting-started-with-azure-governance)
    - [Task 1: Login to Azure Portal](#task-1-login-to-azure-portal)  
    - [Task 2: Azure Activity Logs](#task-2-azure-activity-logs)
    - [Task 3: Manage Resources Tags](#task-3-manage-resources-tags)
    - [Task 4: Azure Policies](#task-4-azure-policies)
-##   [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc-1)
+## [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc-1)
    - [Task 1: Browse through the Arc pre-connected machine in Azure Portal](#task-1-browse-through-the-arc-pre-connected-machine-in-azure-portal)
-##   [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-arc)
-   -   [Task 1: Login and become familiar with Hyper-V Infrastructure](#task-1-login-and-become-familiar-with-hyper-v-infrastructure)
-   -   [Task 2: Connect a Windows Server Virtual Machine to Azure Arc](#task-2-connect-a-windows-server-virtual-machine-to-azure-arc)
-   -   [Task 3: Connect a Linux Virtual Machine to Azure Arc](#task-3-connect-a-linux-virtual-machine-to-azure-arc)
-##   [Exercise 4: Azure Governance for Arc Connected Machine](#exercise-4-azure-governance-for-arc-connected-machine)
-   -   [Task 1: Apply Policy](#task-1-apply-policy)	
-   -   [Task 2: Tag your ARC server](#task-2-tag-your-aRC-server)	
-   -   [Task 3: Activity Logs](#task-3-activity-logs)	
-   -   [Task 4: RBAC](#task-4-rBAC)	
+## [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-arc)
+   - [Task 1: Login and become familiar with Hyper-V Infrastructure](#task-1-login-and-become-familiar-with-hyper-v-infrastructure)
+   - [Task 2: Connect a Windows Server Virtual Machine to Azure Arc](#task-2-connect-a-windows-server-virtual-machine-to-azure-arc)
+   - [Task 3: Connect a Linux Virtual Machine to Azure Arc](#task-3-connect-a-linux-virtual-machine-to-azure-arc)
+## [Exercise 4: Azure Governance for Arc Connected Machine](#exercise-4-azure-governance-for-arc-connected-machine-1)
+   - [Task 1: RBAC + Security](#task-1-rbac--security)
+     - [Theory of least permission](#theory-of-least-permission)
+     - [Custom role](#custom-role)
+   - [Task 2: Apply Policy](#task-2-apply-policy)	
+   - [Task 3: Tag your ARC server](#task-3-tag-your-arc-server)	
+   - [Task 4: Activity Logs](#task-4-activity-logs)	
 
 ## Exercise 1: Getting started with Azure Governance 
 
@@ -191,7 +192,7 @@ We will use the 2nd method to connect our **windows machine** to Azure.
      
 After getting these values, it is creating **pscredential** to login in **Azure PowerShell** using service principle and then, creating a script block to run that block inside the **machines hosted on Hyper-V**. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARC-Host vm with computer name/private ip of WinVm.
 
-## Task 3: Connect a Linux Virtual Machine to Arc
+## Task 3: Connect a Linux Virtual Machine to Azure Arc
 In this task, we will connect the Linux machine to Azure Arc. 
 1. Open windows PowerShell and run the following command and pass the Linux vm ip in prompt
     ```
@@ -354,12 +355,12 @@ Optional initiatives to try… repeat the steps above to test some other policie
 
 **Note**: If you find **winvm non-compliant** means time zone of winvm is different from the time zone you provided in policy. You can change the time zone of winvm using following script and after sometime you will see the winvm complaint state changed to **Compliant**
 
-    ```
+   ```
       $ap = "demo@pass123" 
       $cred = New-Object -ArgumentList "Administrator",(ConvertTo-SecureString -AsPlainText -Force -String $ap) -    TypeName System.Management.Automation.PSCredential 
       $ip = "192.168.0.5" 
       Invoke-Command -ComputerName $ip -Credential $cred -ScriptBlock {Set-TimeZone -Id '(UTC) Coordinated Universal Time'} 
-    ```
+   ```
     
 # Task 3: Tag your ARC server
 1. Open the Azure portal page. Click on this link to go to the Azure ARC machine(s) you have built
