@@ -14,7 +14,7 @@ Table of Contents
    - [Task 4: Azure Policies](#task-4-azure-policies)
 ## [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc-1)
    - [Task 1: Browse through the Arc pre-connected machine in Azure Portal](#task-1-browse-through-the-arc-pre-connected-machine-in-azure-portal)
-## [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-arc)
+## [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-with-arc-1)
    - [Task 1: Login and become familiar with Hyper-V Infrastructure](#task-1-login-and-become-familiar-with-hyper-v-infrastructure)
    - [Task 2: Connect a Windows Server Virtual Machine to Azure Arc](#task-2-connect-a-windows-server-virtual-machine-to-azure-arc)
    - [Task 3: Connect a Linux Virtual Machine to Azure Arc](#task-3-connect-a-linux-virtual-machine-to-azure-arc)
@@ -165,7 +165,7 @@ In this task, you will walk through **on-prem** environment which is hosted on *
 
    ![](./images/azure-arc-1784.png) 
 
-## Task 2: Connect a Windows Server Virtual Machine to Arc
+## Task 2: Connect a Windows Server Virtual Machine to Azure Arc
 Azure Arc for servers (preview) allows you to manage your Windows and Linux machines hosted outside of Azure on your corporate network or other cloud provider, similarly to how you manage native Azure virtual machines. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID, is managed as part of a resource group inside a subscription, and benefits from standard Azure constructs such as Azure Policy and applying tags.
 
 In this task, you will connect the **windows server machine** to **Azure ARC**. There are multiple ways to do this.
