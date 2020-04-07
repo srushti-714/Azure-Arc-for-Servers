@@ -87,10 +87,10 @@ You apply tags to your Azure resources, resource groups, and subscriptions to lo
 ## Task 4: Azure Policies
 Understanding how to create and manage policies in Azure is important for staying compliant with your corporate standards and service level agreements. In this tutorial, you learn to use Azure Policy to do some of the more common tasks related to creating, assigning, and managing policies across your organization, such as:
 
-  • Assign a policy to enforce a condition for resources you create in the future
-  • Create and assign an initiative definition to track compliance for multiple resources
-  • Resolve a non-compliant or denied resource
-  • Implement a new policy across an organization
+  * Assign a policy to enforce a condition for resources you create in the future
+  * Create and assign an initiative definition to track compliance for multiple resources
+  * Resolve a non-compliant or denied resource
+  * Implement a new policy across an organization
 If you would like to assign a policy to identify the current compliance state of your existing resources, the QuickStart articles go over how to do so.
 1. Go to your **Resource group** and click on the **Policies** under Settings. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**.
 
@@ -109,8 +109,8 @@ If you would like to assign a policy to identify the current compliance state of
    ![](./images/azure-arc-1773.png) 
 
 5. Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
-     • Tag Name: **Environment**
-     • Tag Value: **Lab**
+   * Tag Name: **Environment**
+   * Tag Value: **Lab**
 
    ![](./images/azure-arc-1775.png) 
 
@@ -132,8 +132,8 @@ In this lab, two on-prem servers one **windows**, and **Linux** are pre-connecte
    ![](./images/azure-arc-1778.png) 
 
 2. You will see, following two machines are **pre-connected**
-     • **pre-connected-ubuntu**
-     • **pre-connected-winvm**
+   * **pre-connected-ubuntu**
+   * **pre-connected-winvm**
 
    ![](./images/azure-arc-1779.png)
 
@@ -168,9 +168,9 @@ In this task, you will walk through **on-prem** environment which is hosted on *
 Azure Arc for servers (preview) allows you to manage your Windows and Linux machines hosted outside of Azure on your corporate network or other cloud provider, similarly to how you manage native Azure virtual machines. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID, is managed as part of a resource group inside a subscription, and benefits from standard Azure constructs such as Azure Policy and applying tags.
 
 In this task, you will connect the **windows server machine** to **Azure ARC**. There are multiple ways to do this.
-  • Connect Machines to Azure Arc from Azure portal.
-  • Connect Machines at scale using a service principle
-  • Connect machines to Azure Arc with PowerShell DSC
+ * Connect Machines to Azure Arc from Azure portal.
+ * Connect Machines at scale using a service principle
+ * Connect machines to Azure Arc with PowerShell DSC
   
 We will use the 2nd method to connect our **windows machine** to Azure.
 1. Launch **Windows PowerShell** from desktop shortcut.
@@ -184,22 +184,22 @@ We will use the 2nd method to connect our **windows machine** to Azure.
    ![](./images/azure-arc-1785.png)
 
 3. **ConnectWindowsServertoAzureArc.ps1** is getting following values from ***C:\LabFiles\creds.txt*** file and storing that to **variables**. You can review the script to understand it in depth.
-     •	Azure service principle ID     
-     •	App Secret     
-     •	Resource group name     
-     •	Subscription and tenant id
+  * Azure service principle ID     
+  * App Secret     
+  * Resource group name     
+  * Subscription and tenant id
      
 After getting these values, it is creating **pscredential** to login in **Azure PowerShell** using service principle and then, creating a script block to run that block inside the **machines hosted on Hyper-V**. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARC-Host vm with computer name/private ip of WinVm.
 
 ## Task 3: Connect a Linux Virtual Machine to Arc
 In this task, we will connect the Linux machine to Azure Arc. 
 1. Open windows PowerShell and run the following command and pass the Linux vm ip in prompt
-```
-	cd C:\LabFiles\
-	$ip = Read-Host -Prompt 'IP Address of Linux machine'
-	.\ArcAgentLinux.bat $ip
-```
-   &nbsp;&nbsp;![](./images/azure-arc-1331.png)
+    ```
+    cd C:\LabFiles\
+    $ip = Read-Host -Prompt 'IP Address of Linux machine'
+    .\ArcAgentLinux.bat $ip
+    ```
+   ![](./images/azure-arc-1331.png)
 
 2. These commands will open a putty session and login to the Linux machine and run the Azure Arc connect commands automatically. Once the machine is onboarded to Azure you can see the following message in putty terminal:
 info msg= “Successfully Onboarded Resource to Azure”
@@ -213,26 +213,25 @@ Security best practices specify that a user should be given the lowest permissio
 # Custom role
 1. Save the role definition as ServerAuditor.json to C:\LabFiles directory in ARCHOST VM. You can use Visual studio code or notepad to edit and save the file. Provide the Subscription Id and resourceGroupsName of your lab environment in following custom role definition. You can get the values on lab details page.
 
-   ![](./images/azure-arc-1221.png)
-   
+   ![](./images/azure-arc-1221.png)   
 
-```
-{
-              "Actions": [
-                           "Microsoft.Authorization/policyassignments/read",
-                           "Microsoft.Authorization/policydefinitions/read",
-                           "Microsoft.Authorization/policysetdefinitions/read",
-                           "Microsoft.Compute/virtualMachines/read",
-                           "Microsoft.HybridCompute/machines/read",
-                           "Microsoft.PolicyInsights/*/read"
-                          ],
-                "AssignableScopes": [
-                                    "/subscriptions/<Subscription Id>/resourceGroups/<resourceGroupsName>"
-                                     ],
-                "Description": "Can audit server compliance.",
-                "Name": "Server Auditor" 
-}
-```
+    ```
+    {
+      "Actions": [
+         "Microsoft.Authorization/policyassignments/read",
+         "Microsoft.Authorization/policydefinitions/read",
+         "Microsoft.Authorization/policysetdefinitions/read",
+         "Microsoft.Compute/virtualMachines/read",
+         "Microsoft.HybridCompute/machines/read",
+         "Microsoft.PolicyInsights/*/read"
+         ],
+      "AssignableScopes": [
+         "/subscriptions/<Subscription Id>/resourceGroups/<resourceGroupsName>"
+         ],
+      "Description": "Can audit server compliance.",
+      "Name": "Server Auditor" 
+    }
+    ```
 
 2. Once you save the file, it will look like below.
 	
@@ -240,31 +239,28 @@ Security best practices specify that a user should be given the lowest permissio
 
 3. Run the PowerShell commands to create a role definition.
  
- ```
-                    #Import Creds
-                    CD C:\LabFiles
-                    $credsfilepath = ".\creds.txt"
-                    $creds = Get-Content $credsfilepath | Out-String | ConvertFrom-StringData
+     ```
+     #Import Creds
+     CD C:\LabFiles
+     $credsfilepath = ".\creds.txt"
+     $creds = Get-Content $credsfilepath | Out-String | ConvertFrom-StringData
+     $AppID = "$($creds.AppID)"
+     $AppSecret = "$($creds.AppSecret)"
+     $TenantID = "$($creds.TenantID)"
+     $SubscriptionId = "$($creds.SubscriptionId)"
+     $passwd = ConvertTo-SecureString $AppSecret -AsPlainText -Force
+     $pscredential = New-Object System.Management.Automation.PSCredential($AppID, $passwd)
+     Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
+     New-AzRoleDefinition -InputFile .\ServerAuditor.json 
+    ```
 
-                    $AppID = "$($creds.AppID)"
-                    $AppSecret = "$($creds.AppSecret)"
-                    $TenantID = "$($creds.TenantID)"
-                    $SubscriptionId = "$($creds.SubscriptionId)"
-                    $passwd = ConvertTo-SecureString $AppSecret -AsPlainText -Force
-                    $pscredential = New-Object System.Management.Automation.PSCredential($AppID, $passwd)
-                    Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
-                    New-AzRoleDefinition -InputFile .\ServerAuditor.json 
- ```
- 
-
-   &nbsp;&nbsp;&nbsp;![](./images/azure-arc-1225.png)
+   ![](./images/azure-arc-1225.png)
 
 4. Now, go to your resource group in Azure portal and click on **Access control (IAM)** and then click on **+ Add** button to assign the role to self which you just created.
 
    ![](./images/azure-arc-1226.png)
 
-
-5. Now, click on Add role assignment.
+5. Now, click on **Add role assignment**.
 
    ![](./images/azure-arc-1227.png)
 
@@ -272,14 +268,13 @@ Security best practices specify that a user should be given the lowest permissio
 
    ![](./images/azure-arc-1228.png)
 
-7. Now, in Select option search for your azure account, click on that and then select the save button to assign the Server Auditor role to self.
+7. Now, in Select option search for your **azure account**, click on that and then select the **save** button to **assign the Server Auditor role** to self.
 
    ![](./images/azure-arc-1229.png)
 
-8. Once the role assignment succeed you will see the notification popup.
+8. Once the **role assignment** succeed you will see the **notification** on bell icon.
 
    ![](./images/azure-arc-1230.png)
-
 
 9. You can review the role assigned to self by going to **Role assignments**.
 
@@ -309,7 +304,7 @@ Policies can be applied to ARC servers the same way they are applied to Microsof
    ![](./images/azure-arc-2225.png)
 
 6. From the **Time zone** drop down menu select **“(UTC) Coordinated Universal Time”**. Click **Next**
-7. Read the description and then select the checkbox for Create a remediation task. This ensures that the policy will apply to existing resources after the policy is assigned.  If that box is not selected, then the policy only applies to newly created resources.
+7. Read the description and then select the checkbox for **Create a remediation task**. This ensures that the policy will apply to existing resources after the policy is assigned.  If that box is not selected, then the policy only applies to newly created resources.
 8. Select the **Create a Managed Identity** check box and the click **Next** again
 
    ![](./images/azure-arc-2228.png)
@@ -323,56 +318,49 @@ Policies can be applied to ARC servers the same way they are applied to Microsof
 
     ![](./images/azure-arc-3331.png)
 
-12. Confirm that the **Scope** is showing the correct Resource Group – should default to …/ARC
+12. Confirm that the **Scope** is showing the correct Resource Group – should default to …/Azure-ARC-171289
 
     ![](./images/azure-arc-3333.png)
 
-a. Click on the **ellipses** …to the right to select all options to include the server as shown to the right
+      a. Click on the **ellipses** …to the right to select all options to include the server as shown to the right
 
 13. Select the Checkbox beneath **Re-evaluate resource compliance before remediating**
 14. In the **Locations** drop-down list, select the location where you installed your ARC Server
-             o	If you are not sure or can’t remember, look on the **Overview** window for your server
+      * If you are not sure or can’t remember, look on the **Overview** window for your server
 15. Click **Remediate** at the bottom of the **New Remediation Task** window
 
     ![](./images/azure-arc-3335.png)
 
-
 In the next window at the bottom you will see a blue circle beside **Evaluating**. When it is successful and completed, the circle will turn green and it will say **Complete**. NOTE: if you had many ARC servers, you could evaluate the all at once but changing the scope to select one of more locations or all within a resource group.
 
-   &nbsp;![](./images/azure-arc-3336.png)
-
+   ![](./images/azure-arc-3336.png)
 
 Optional initiatives to try… repeat the steps above to test some other policies such as:
 
 **Operational compliance**
-•	Micro-segmentation to ensure servers are connected to the right network (remote host connection status doesn't match the specified one)
-
-•	Certificate about to expire
-
-•	Application installed: ensure backup is installed
-
-•	Machines are not restarted after 45 days, indicator that it has been forgotten, running but not used
+  * Micro-segmentation to ensure servers are connected to the right network (remote host connection status doesn't match the specified one)
+  * Certificate about to expire
+  * Application installed: ensure backup is installed
+  * Machines are not restarted after 45 days, indicator that it has been forgotten, running but not used
 
 **Security compliance**
-•	Password policy
-•	Application installed or not installed (like diagnostic tools used for investigation, but make sure it is removed after troubleshooting)
-•	TLS 1.2 monitoring => part of PCI DSS (data security standard)
+  * Password policy
+  * Application installed or not installed (like diagnostic tools used for investigation, but make sure it is removed after troubleshooting)
+  * TLS 1.2 monitoring => part of PCI DSS (data security standard)
 
-16. You can check your server is compliant or not against **“[Preview]: Configure time zone on Windows machines”** policy you assigned in previous step. Click on the policies from winvm options from left hand pane and then look for **Compliance** state. You can see **winvm** is compliant against this policy.
+16. You can check your server is **compliant** or **not** against **“[Preview]: Configure time zone on Windows machines”** policy you assigned in previous step. Click on the **policies** from winvm options from left hand pane and then look for **Compliance** state. You can see **winvm** is compliant against this policy.
 
     ![](./images/azure-arc-3337.png)
 
-
 **Note**: If you find **winvm non-compliant** means time zone of winvm is different from the time zone you provided in policy. You can change the time zone of winvm using following script and after sometime you will see the winvm complaint state changed to **Compliant**
-```
-             $ap = "demo@pass123" 
 
-             $cred = New-Object -ArgumentList "Administrator",(ConvertTo-SecureString -AsPlainText -Force -String $ap) -    TypeName System.Management.Automation.PSCredential 
-
-             $ip = "192.168.0.5" 
-
-             Invoke-Command -ComputerName $ip -Credential $cred -ScriptBlock {Set-TimeZone -Id '(UTC) Coordinated Universal Time'} 
-```
+    ```
+      $ap = "demo@pass123" 
+      $cred = New-Object -ArgumentList "Administrator",(ConvertTo-SecureString -AsPlainText -Force -String $ap) -    TypeName System.Management.Automation.PSCredential 
+      $ip = "192.168.0.5" 
+      Invoke-Command -ComputerName $ip -Credential $cred -ScriptBlock {Set-TimeZone -Id '(UTC) Coordinated Universal Time'} 
+    ```
+    
 # Task 3: Tag your ARC server
 1. Open the Azure portal page. Click on this link to go to the Azure ARC machine(s) you have built
 2. Click on your machine that you want to tag
@@ -392,8 +380,8 @@ Optional initiatives to try… repeat the steps above to test some other policie
    ![](./images/azure-arc-4441.png)
 
 # Task 4: Activity Logs
-In last task, you added tags to one of the hybrid computes machines, check the activity logs for that.
-1. In this step, click on the Activity logs, you will see **Write Azure Arc Machines** operation is performed. Expand the operation and click on the one of expanded operation.
+In last task, you added **tags** to one of the **Hybrid Computes machines**, check the **activity logs** for that.
+1. In this step, click on the **Activity logs**, you will see **Write Azure Arc Machines** operation is performed. Expand the operation and click on the one of **expanded operation**.
 
    ![](./images/azure-arc-4442.png)
 
