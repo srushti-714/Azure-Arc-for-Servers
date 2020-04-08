@@ -196,7 +196,8 @@ After getting these values, it is creating **pscredential** to login in **Azure 
 
 ## Task 3: Connect a Linux Virtual Machine to Azure Arc
 In this task, we will connect the Linux machine to Azure Arc. 
-1. Open windows PowerShell and run the following command and pass the Linux vm ip in prompt
+1. Open windows PowerShell and run the following command and pass the **UbuntuVm** ip in powershell console when it prompt for **IP Address of Linux machine**
+     * UbuntuVm IP: **192.168.0.7**
     ```
     cd C:\LabFiles\
     $ip = Read-Host -Prompt 'IP Address of Linux machine'
@@ -204,7 +205,7 @@ In this task, we will connect the Linux machine to Azure Arc.
     ```
    ![](./images/azure-arc-1331.png)
 
-2. These commands will open a putty session and login to the Linux machine and run the Azure Arc connect commands automatically. Once the machine is onboarded to Azure you can see the following message in putty terminal:
+2. These commands will open a **Putty session** for **UbuntuVm** and login to the machine and run the Azure Arc connect commands automatically. Once the machine is **onboarded** to Azure Arc, you can see the following message in **Putty terminal**:
 **info msg= “Successfully Onboarded Resource to Azure”**
 
    ![](./images/azure-arc-1332.png)
