@@ -97,4 +97,4 @@ If you would like to assign a policy to identify the current compliance state of
 
    ![](./images/azure-arc-1777-2.png)
    
-This policy will audit if the resources location is matching with Resource Group location or not. In next exercise, you can go to the **Hybrid compute instances** and check if the policy is compliant or not for those instances. If the location of those instances matches with location of Resource Group it will show the policy as compliant otherwise non-complaint. 
+This policy will audit if the **resource location** is matching with Resource Group location or not. In next exercise, you will go through the **Hybrid compute instances** and check if the policy is **Compliant** or **not** for those instances. If the location of those instances matches with location of Resource Group it will show the policy as **Compliant** otherwise **Non-complaint**. 
