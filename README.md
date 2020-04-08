@@ -6,7 +6,7 @@ To deliver this experience with your hybrid machines hosted outside of Azure, th
 
 #
 
-Lab time: 2 Hours
+#### Lab time: 2 Hours
 
 #
 
