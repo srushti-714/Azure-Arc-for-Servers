@@ -1,5 +1,7 @@
 ## Azure Arc: Hands-on Lab
 
+Lab time: 2 Hours
+
 For customers who want to simplify complex and distributed environments across on-premises, edge and multi-cloud, Azure Arc enables deployment of Azure services anywhere and extends Azure management to any infrastructure.
 
 This hands-on lab introduces readers to Azure Arc and includes walkthrough of setup and management of connected scenarios through Azure Arc.
