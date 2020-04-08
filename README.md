@@ -101,27 +101,29 @@ If you would like to assign a policy to identify the current compliance state of
 
    ![](./images/azure-arc-1771.png) 
 
-3. Now, in **Search box** type **“Require a tag and its value on resource groups”** and click on the searched definition and then click on **Select**.
+3. Now, in **Search box** type ***Audit resource location matches resource group location*** and click on the searched definition and then click on **Select**.
 
-   ![](./images/azure-arc-1772.png) 
+   ![](./images/azure-arc-1772-1.png) 
 
 4. Now, click on **next** to move on parameters tab.
 
-   ![](./images/azure-arc-1773.png) 
+   ![](./images/azure-arc-1773-1.png) 
 
-5. Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
-   * Tag Name: **Environment**
-   * Tag Value: **Lab**
+5. On parameteres tab leave everything default and click on **Next**.
 
-   ![](./images/azure-arc-1775.png) 
+   ![](./images/azure-arc-1775-1.png) 
 
-6. Leave all the values **default** on **Remediation** tab and click on the **Review + create**.
+6. Make sure **checkbox** is checked, then select a **region** in which your resource group is deployed on **Remediation** tab and click on the **Review + create**.
 
-   ![](./images/azure-arc-1776.png)
+   ![](./images/azure-arc-1776-1.png)
 
 7. On **Review + create** tab click on the **Create** to create the **policy assignment**.
 
-   ![](./images/azure-arc-1777.png)
+   ![](./images/azure-arc-1777-1.png)
+   
+8. Once the **policy assignment** is completed, you will see following **notification** on upper right corner of Azure portal.
+
+   ![](./images/azure-arc-1777-2.png)
  
 ## Exercise 2: Getting started with Azure Arc
 In the provided lab environment, you would already have one Windows Server running on-prem in a **Hyper-V** machine connected through Arc. In this exercise, we’ll explore this **pre-connected** Azure Arc resources.
