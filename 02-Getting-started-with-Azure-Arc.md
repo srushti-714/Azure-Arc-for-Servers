@@ -1,5 +1,5 @@
 # Exercise 2: Getting started with Azure Arc
-In the provided lab environment, you would already have one Windows Server running on-prem in a **Hyper-V** machine connected through Arc. In this exercise, we’ll explore this **pre-connected** Azure Arc resources.
+In the provided lab environment, you would already have one Windows Server running on-prem in a **Hyper-V** machine connected through Azure Arc. In this exercise, we’ll explore **pre-connected** Azure Arc resources.
 
 ## Task 1: Browse through the Arc pre-connected machine in Azure Portal.
 In this lab, two on-prem servers one **windows**, and **Linux** are pre-connected to Azure Arc and you can access the pre-connected server and play around those. 
