@@ -154,11 +154,11 @@ Azure Arc extends Azure Resource Manager capabilities to Linux and Windows serve
 ## Task 1: Login and become familiar with Hyper-V Infrastructure
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a virtual machine. Each *virtual machine* acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.
 In this task, you will walk through **on-prem** environment which is hosted on **Hyper-V**. You will find four virtual machines hosted on Hyper-V server.	
-1. Find the ARC-Host VM details on lab details page:
+1. Find the ARCHOST VM details on lab details page:
 
    ![](./images/azure-arc-1782.png) 
 
-2. Login to the **ARC-Host** VM using **RDP** connection.
+2. Login to the **ARCHOST** VM using **RDP** connection.
 3. Once you logged into the VM, launch the **Hyper-V manager** from the shortcut created on desktop. You’ll see total four virtual machines are running in Hyper-V. Two **Windows VM** and two **Linux (Ubuntu) VM**. **winvm-pre-connected** and **ubuntu-pre-connected** VM is already connected to **Azure Arc**, which you explored in earlier exercises on **Azure portal**.
 
    ![](./images/azure-arc-1783.png)
@@ -192,7 +192,7 @@ We will use the 2nd method to connect our **windows machine** to Azure.
      * Resource group name     
      * Subscription and tenant id
      
-After getting these values, it is creating **pscredential** to login in **Azure PowerShell** using service principle and then, creating a script block to run that block inside the **machines hosted on Hyper-V**. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARC-Host vm with computer name/private ip of WinVm.
+After getting these values, it is creating **pscredential** to login in **Azure PowerShell** using service principle and then, creating a script block to run that block inside the **machines hosted on Hyper-V**. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARCHOST vm with computer name/private ip of WinVm.
 
 ## Task 3: Connect a Linux Virtual Machine to Azure Arc
 In this task, we will connect the Linux machine to Azure Arc. 
