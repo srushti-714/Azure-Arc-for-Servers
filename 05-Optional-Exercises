@@ -1,0 +1,8 @@
+# Optional Exercises to Explore more on Policies and Tags
+
+* Windows web servers that are not using secure communication protocols (requires IIS on nodes)
+* Windows VMs on which the Log Analytics agent is not connected as expected (requires Azure Monitor agent)
+* Windows VMs on which the specified services are not installed and 'Running'
+* Windows VMs that are not joined to the specified domain
+* Windows VMs in which the Administrators group does not contain only the specified members
+* Windows VMs with a pending reboot
