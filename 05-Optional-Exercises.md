@@ -84,11 +84,11 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/arcmachine.png)
    
-1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in Compliant State.
+1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in Compliant State, because IIS enables the TLS 1.1, 1.2 protocol and in this server IIS is not enabled
 
    ![](./images/checkpreconnectedwinvmiiscompliance.png)
    
-1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this server.
+1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this server, which is enabling the TLS protocol.
 
 
 
