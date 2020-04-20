@@ -66,7 +66,15 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/remediation.png)
    
-1. 
+1. Check mark the Re-evalute resource compliance before remediating, select the all locations and then click on **Remediate**.
+
+   ![](./images/newremediation.png)
+   
+1. In the next window at the bottom you will see a blue circle beside **Evaluating**. When it is successful and completed, the circle will turn green and it will say **Complete**. NOTE: if you had many ARC servers, you could evaluate the all at once but changing the scope to select one of more locations or all within a resource group.
+
+   ![](./images/evaluating.png)
+   
+1. Optional initiatives to try… repeat the steps above to test some other policies such as:
 
  
 
