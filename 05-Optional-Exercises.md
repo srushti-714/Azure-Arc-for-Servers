@@ -19,7 +19,7 @@
 
 ## Windows web servers that are not using secure communication protocols (requires IIS on nodes)
 
-In this task, you will create initialive assignment **Audit Windows web servers that are not using secure communication protocols**, which will audit the VM as **Compliant** and **Non-compliant**.
+In this task, you will create initialive assignment **Audit Windows web servers that are not using secure communication protocols**, which will audit the VM as **Compliant** and **Non-compliant**. This initiative have two policy definations one is to install the pre-requsite to the guest os and other is to audit the compliance status.
 
 You will apply the **Initiatives** at resource group and it will audit all the guest VMs within that resource group.
 
@@ -89,6 +89,14 @@ environment. Select **Azure-ARC-170523**.
    ![](./images/checkpreconnectedwinvmiiscompliance.png)
    
 1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this server, which is enabling the TLS protocol.
+
+### Similar way you can Assign other initiatives and check the compliance status of the servers.
+
+## Windows VMs on which the specified services are not installed and 'Running' 
+
+By assigning this initiative you can check if any service is installed and running or not on windows guest os.
+
+1. You can Assign this intialtive very simillar way of previous one, in this you just have to provide the windows service name in parameter, services like: WinRm, wuauserv (for windows update), WSearch (windows search service), RasMan (remote desktop connections) etc.
 
 
 
