@@ -23,6 +23,25 @@ In this task, we will create an initialive assignment **Audit Windows web server
 
 You will apply the **Initiatives** at resource group and it will audit all the guest VMs within that resource group.
 
+1. In your Azure portal, browse through the **Resource groups**. From the navigate panel, select **Resource groups**.
+
+   ![](./images/lunchResourceGroup.png)
+
+1. You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab
+environment. Select **Azure-ARC-170523**.
+
+   ![](./images/azure-arc-170523.png) 
+   
+1. Now, select the **Policies** then select **Compliance** and then select **Assign initiative** to assign the in-build initiative.
+   
+   ![](./images/gotointiative.png)
+   
+1. Leave default value for the **Scope**, **Exclusions** and for **Basics** click on the ellipses (…) to the right of **Initiative definition**.
+
+   ![](./images/selectdefination.png)
+   
+1. In the Search window for available definitions, type **secure** and select the one called Audit Windows web servers that are not using secure communication protocols. Click the Select button below.
+
+   ![](./images/selectdefination.png)
+   
 1. 
-
-
