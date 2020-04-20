@@ -73,8 +73,27 @@ environment. Select **Azure-ARC-170523**.
 1. In the next window at the bottom you will see a blue circle beside **Evaluating**. When it is successful and completed, the circle will turn green and it will say **Complete**. NOTE: if you had many ARC servers, you could evaluate the all at once but changing the scope to select one of more locations or all within a resource group.
 
    ![](./images/evaluating.png)
+    
+1. Pre-connected-winvm is already configured with IIS web server and winvm is still don't have IIS web server. Here, it will show **Pre-connected-winvm** as **Non-compliant** and **winvm** as **Compliant**. You can go to each windows Arc servers from Azure portal and check the policy compliance.
+
+1. Search for Azure Arc from search box and then select the Machines – Azure Arc.
+
+   ![](./images/azure-arc-1778.png)
+ 
+1. You will see, following four machines are in **Connected** state. Click on the **winvm** to check the **Compliance**.
+
+   ![](./images/arcmachine.png)
    
-1. Optional initiatives to try… repeat the steps above to test some other policies such as:
+1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in Compliant State.
+
+   ![](./images/checkpreconnectedwinvmiiscompliance.png)
+   
+1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this server.
+
+
+
+
+
 
  
 
