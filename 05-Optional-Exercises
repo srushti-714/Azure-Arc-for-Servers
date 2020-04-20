@@ -3,7 +3,7 @@
   * Windows VMs on which the specified services are not installed and 'Running' 
   * Windows VMs that are not joined to the specified domain 
   * Windows VMs in which the Administrators group does not contain only the specified members 
-  * Windows VMs with a pending reboot 
+  * Windows VMs with a pending reboot
   
 # Additional Audit Policies
   * Add tag to all resources in a resource group using Azure policy 
@@ -11,4 +11,8 @@
   * Audit on password policy on the machine 
   * Audit for an application installed on the machine (check for notepad.exe)
 
-## Windows Web servers that are not using secure communication protocols (requires IIS on nodes)
+## Windows web servers that are not using secure communication protocols (requires IIS on nodes)
+
+In this task, we will create an initialive assignment **Audit Windows web servers that are not using secure communication protocols**, which will audit the VM as **Compliant** which doesn't have IIS enabled and audit teh VMs as **Non-compliant** in which IIS is enabled.
+
+
