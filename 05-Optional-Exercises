@@ -1,8 +1,12 @@
-# Optional Exercises to Explore more on Policies and Tags
-
-* Windows web servers that are not using secure communication protocols (requires IIS on nodes)
-* Windows VMs on which the Log Analytics agent is not connected as expected (requires Azure Monitor agent)
-* Windows VMs on which the specified services are not installed and 'Running'
-* Windows VMs that are not joined to the specified domain
-* Windows VMs in which the Administrators group does not contain only the specified members
-* Windows VMs with a pending reboot
+# Windows Server Management
+  * Windows web servers that are not using secure communication protocols (requires IIS on nodes) 
+  * Windows VMs on which the specified services are not installed and 'Running' 
+  * Windows VMs that are not joined to the specified domain 
+  * Windows VMs in which the Administrators group does not contain only the specified members 
+  * Windows VMs with a pending reboot 
+  
+# Additional Audit Policies
+  * Add tag to all resources in a resource group using Azure policy 
+  * Audit certificate going to expire in 30 days 
+  * Audit on password policy on the machine 
+  * Audit for an application installed on the machine (check for notepad.exe)
