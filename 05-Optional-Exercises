@@ -10,3 +10,5 @@
   * Audit certificate going to expire in 30 days 
   * Audit on password policy on the machine 
   * Audit for an application installed on the machine (check for notepad.exe)
+
+## Windows Web servers that are not using secure communication protocols (requires IIS on nodes)
