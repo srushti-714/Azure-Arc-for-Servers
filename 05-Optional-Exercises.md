@@ -40,8 +40,34 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/selectdefination.png)
    
-1. In the Search window for available definitions, type **secure** and select the one called Audit Windows web servers that are not using secure communication protocols. Click the Select button below.
+1. In the Search window for available definitions, type **secure** and select the one called **Audit Windows web servers that are not using secure communication protocols**. Click the **Select** button below.
 
-   ![](./images/selectdefination.png)
+   ![](./images/selectsecurecommunicationprotocols.png)
+   
+1. Click **Next** at the bottom of the window and on **Parameteres** tab leave default value and move to the next tab by selecting the **Next** button.
+
+   ![](./images/nexttoparameter.png)
+    
+1. On **Remediation** blade, read the description and then select the **checkbox** for **Create a remediation task**. This ensures that the policy will apply to existing resources after the initiative is assigned. If that box is not selected, then the initiative only applies to newly created resources.
+
+1. Select the **Create a Managed Identity** check box and the click **Next** again.
+
+   ![](./images/nexttoparameter.png)
+   
+1. Then at the bottom of the **Assign initiative** window click on **Create**.
+
+   ![](./images/createsecureinitiative.png)
+   
+1. Click on the new **initiative** just created **Audit Windows web servers that are not using secure communication protocols**.
+
+   ![](./images/createsecureinitiative.png)
+   
+1. Click **Create a Remediation Task** at the top right, it will start the Remediation if it is not started already, if it is already started then it can give error like one remediation task is already running, you can ignore that error and proceed.
+
+   ![](./images/remediation.png)
    
 1. 
+
+ 
+
+
