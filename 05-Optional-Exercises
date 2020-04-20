@@ -13,6 +13,7 @@
 
 ## Windows web servers that are not using secure communication protocols (requires IIS on nodes)
 
-In this task, we will create an initialive assignment **Audit Windows web servers that are not using secure communication protocols**, which will audit the VM as **Compliant** which doesn't have IIS enabled and audit teh VMs as **Non-compliant** in which IIS is enabled.
+In this task, we will create an initialive assignment **Audit Windows web servers that are not using secure communication protocols**, 
+which will audit the VM as **Compliant** which doesn't have IIS enabled and audit teh VMs as **Non-compliant** in which IIS is enabled.
 
 
