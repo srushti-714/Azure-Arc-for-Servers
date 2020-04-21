@@ -5,12 +5,6 @@
   * [Windows VMs in which the Administrators group contains any of the specified members](#audit-windows-vms-in-which-the-administrators-group-contains-any-of-the-specified-members)
   * [Windows VMs with a pending reboot](#windows-vms-with-a-pending-reboot)
   
-# Additional Audit Policies
-  * Add tag to all resources in a resource group using Azure policy 
-  * Audit certificate going to expire in 30 days 
-  * Audit on password policy on the machine 
-  * Audit for an application installed on the machine (check for notepad.exe)
-  
 ## Terms used in this exercise:
    * Intiative
    * Remediation tasks
@@ -120,6 +114,28 @@ You can see the **Compliance state** for all the Initiatives assigned above by g
 You can now go to individual Arc Machines and then click on policy to see the **Compliance state**.
 
    ![](./images/checkallinitiatives.png)
+
+# Additional Audit Policies
+
+Here is the few additional policies that you can perform.
+  * Add tag to all resources in a resource group using Azure policy 
+  * Audit Windows VMs that contain certificates expiring within the specified number of days
+  * Audit on password policy on the machine 
+  * Audit for an application installed on the machine (check for notepad.exe)
+  * Audit Windows VMs that have the specified applications installed
+  
+### Audit Windows VMs that contain certificates expiring within the specified number of days
+
+This initiative deploys the policy requirements and audits Windows virtual machines that contain certificates expiring within the specified number of days.
+
+### Audit VMs with insecure password security settings
+
+This initiative deploys the policy requirements and audits virtual machines with insecure password security settings.
+
+### Audit Windows VMs that do not have the specified applications installed
+
+This initiative deploys the policy requirements and audits Windows virtual machines that do not have the specified applications installed. Here you need to define  application name in parameter for the initiative to audit if the application is not installed in the VMs. You can check for **Notepad++** becouse it is installed in pre-connected-winvm already.
+
 
 
 
