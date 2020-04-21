@@ -2,7 +2,7 @@
   * Windows web servers that are not using secure communication protocols (requires IIS on nodes) 
   * Windows VMs on which the specified services are not installed and 'Running' 
   * Windows VMs that are not joined to the specified domain 
-  * Windows VMs in which the Administrators group does not contain only the specified members 
+  * Windows VMs in which the Administrators group contains any of the specified members
   * Windows VMs with a pending reboot
   
 # Additional Audit Policies
@@ -94,9 +94,33 @@ environment. Select **Azure-ARC-170523**.
 
 ## Windows VMs on which the specified services are not installed and 'Running' 
 
-By assigning this initiative you can check if any service is installed and running or not on windows guest os.
+This initiative deploys the policy requirements and audits Windows virtual machines on which the specified services are not installed and 'Running'.
 
-1. You can Assign this intialtive very simillar way of previous one, in this you just have to provide the windows service name in parameter, services like: WinRm, wuauserv (for windows update), WSearch (windows search service), RasMan (remote desktop connections) etc.
+1. You can Assign this intialtive very simillar way of previous one, in this you have to provide the windows service name in parameter, services like:
+   
+   * **SecurityHealthService:** Windows Security Service handles unified device protection and health information)
+   * **WSearch:** Provides content indexing, property caching, and search results for files, e-mail, and other content.
+   * **Dnscache:** The DNS Client service (dnscache) caches Domain Name System (DNS) names and registers the full computer name for this computer. If the service is stopped, DNS names will continue to be resolved. However, the results of DNS name queries will not be cached and the computer's name will not be registered. If the service is disabled, any services that explicitly depend on it will fail to start.
+   * **WinRM:** Windows Remote Management (WinRM) service implements the WS-Management protocol for remote management. WS-Management is a standard web services protocol used for remote software and hardware management. The WinRM service listens on the network for WS-Management requests and processes them. The WinRM Service needs to be configured with a listener using winrm.cmd command line tool or through Group Policy in order for it to listen over the network. The WinRM service provides access to WMI data and enables event collection. Event collection and subscription to events require that the service is running. WinRM messages use HTTP and HTTPS as transports. The WinRM service does not depend on IIS but is preconfigured to share a port with IIS on the same machine.  The WinRM service reserves the /wsman URL prefix. To prevent conflicts with IIS, administrators should ensure that any websites hosted on IIS do not use the /wsman URL prefix.
+
+## Windows VMs that are not joined to the specified domain
+
+This initiative deploys the policy requirements and audits Windows virtual machines that are not joined to the specified domain. You need to define **domain name** in parameter when you **Assign initiative**.
+
+## Audit Windows VMs in which the Administrators group contains any of the specified members
+
+This initiative deploys the policy requirements and audits Windows virtual machines in which the Administrators group contains any of the specified members. 
+Define **Member/Members name** in parameter when you **Assign initiative**.
+
+## Windows VMs with a pending reboot
+
+This initiative deploys the policy requirements and audits Windows virtual machines with a pending reboot.
+
+You can see the Compliance state for 
+
+
+
+
 
 
 
