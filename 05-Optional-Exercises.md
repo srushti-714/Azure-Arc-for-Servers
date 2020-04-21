@@ -121,7 +121,7 @@ Here is the few additional policies that you can perform.
   * Add tag to all resources in a resource group using Azure policy 
   * Audit Windows VMs that contain certificates expiring within the specified number of days
   * Audit on password policy on the machine 
-  * Audit for an application installed on the machine (check for notepad.exe)
+  * Audit Windows VMs that do not have the specified applications installed
   * Audit Windows VMs that have the specified applications installed
   
 ### Audit Windows VMs that contain certificates expiring within the specified number of days
@@ -136,8 +136,9 @@ This initiative deploys the policy requirements and audits virtual machines with
 
 This initiative deploys the policy requirements and audits Windows virtual machines that do not have the specified applications installed. Here you need to define  application name in parameter for the initiative to audit if the application is not installed in the VMs. You can check for **Notepad++** becouse it is installed in pre-connected-winvm already.
 
+### Audit Windows VMs that have the specified applications installed
 
-
+This initiative deploys the policy requirements and audits Windows virtual machines that have the specified applications installed. It should give the opposite Compliace state in complare to previous one if you are checking for the same application **Notepad++**
 
 
 
