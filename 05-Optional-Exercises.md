@@ -90,9 +90,8 @@ environment. Select **Azure-ARC-170523**.
    
 1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this server, which is enabling the TLS protocol.
 
-### Similar way you can Assign other initiatives and check the compliance status of the servers.
 
-## Windows VMs on which the specified services are not installed and 'Running' 
+### Windows VMs on which the specified services are not installed and 'Running' 
 
 This initiative deploys the policy requirements and audits Windows virtual machines on which the specified services are not installed and 'Running'.
 
@@ -103,22 +102,24 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * **Dnscache:** The DNS Client service (dnscache) caches Domain Name System (DNS) names and registers the full computer name for this computer. If the service is stopped, DNS names will continue to be resolved. However, the results of DNS name queries will not be cached and the computer's name will not be registered. If the service is disabled, any services that explicitly depend on it will fail to start.
    * **WinRM:** Windows Remote Management (WinRM) service implements the WS-Management protocol for remote management. WS-Management is a standard web services protocol used for remote software and hardware management. The WinRM service listens on the network for WS-Management requests and processes them. The WinRM Service needs to be configured with a listener using winrm.cmd command line tool or through Group Policy in order for it to listen over the network. The WinRM service provides access to WMI data and enables event collection. Event collection and subscription to events require that the service is running. WinRM messages use HTTP and HTTPS as transports. The WinRM service does not depend on IIS but is preconfigured to share a port with IIS on the same machine.  The WinRM service reserves the /wsman URL prefix. To prevent conflicts with IIS, administrators should ensure that any websites hosted on IIS do not use the /wsman URL prefix.
 
-## Windows VMs that are not joined to the specified domain
+### Windows VMs that are not joined to the specified domain
 
 This initiative deploys the policy requirements and audits Windows virtual machines that are not joined to the specified domain. You need to define **domain name** in parameter when you **Assign initiative**.
 
-## Audit Windows VMs in which the Administrators group contains any of the specified members
+### Audit Windows VMs in which the Administrators group contains any of the specified members
 
 This initiative deploys the policy requirements and audits Windows virtual machines in which the Administrators group contains any of the specified members. 
 Define **Member/Members name** in parameter when you **Assign initiative**.
 
-## Windows VMs with a pending reboot
+### Windows VMs with a pending reboot
 
 This initiative deploys the policy requirements and audits Windows virtual machines with a pending reboot.
 
-You can see the Compliance state for 
+You can see the **Compliance state** for all the Initiatives assigned above by going to the Arc Server Manager. Search for **Azure Arc** from the Azure resources, services search box from the top of the portal and then click on Azure Arc. After this, select **Manage Servers**.
 
+You can now go to individual Arc Machines and then click on policy to see the **Compliance state**.
 
+   ![](./images/checkallinitiatives.png)
 
 
 
