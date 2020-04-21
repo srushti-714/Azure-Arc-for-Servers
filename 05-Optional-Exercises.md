@@ -118,11 +118,11 @@ You can now go to individual Arc Machines and then click on policy to see the **
 # Additional Audit Policies
 
 Here is the few additional policies that you can perform.
-  * Add tag to all resources in a resource group using Azure policy 
   * Audit Windows VMs that contain certificates expiring within the specified number of days
   * Audit on password policy on the machine 
   * Audit Windows VMs that do not have the specified applications installed
   * Audit Windows VMs that have the specified applications installed
+  * Inherit a tag from the resource group if missing
   
 ### Audit Windows VMs that contain certificates expiring within the specified number of days
 
@@ -140,7 +140,11 @@ This initiative deploys the policy requirements and audits Windows virtual machi
 
 This initiative deploys the policy requirements and audits Windows virtual machines that have the specified applications installed. It should give the opposite Compliace state in complare to previous one if you are checking for the same application **Notepad++**
 
+### Inherit a tag from the resource group if missing
 
+It is not an intiative, it is a single policy. So, you need to go in Assign Policy and search for this to apply on resource group.
+
+Adds the specified tag with its value from the parent resource group when any resource missing this tag is created or updated. Existing resources can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed.
 
 
 
