@@ -1,6 +1,6 @@
 # Windows Server Management
   * [Windows web servers that are not using secure communication protocols (requires IIS on nodes)](#windows-web-servers-that-are-not-using-secure-communication-protocols-requires-iis-on-nodes)
-  * [Windows VMs on which the specified services are not installed and 'Running']((#windows-vms-on-which-the-specified-services-are-not-installed-and-running)
+  * [Windows VMs on which the specified services are not installed and 'Running'](#windows-vms-on-which-the-specified-services-are-not-installed-and-running)
   * [Windows VMs that are not joined to the specified domain](#windows-vms-that-are-not-joined-to-the-specified-domain)
   * [Windows VMs in which the Administrators group contains any of the specified members](#audit-windows-vms-in-which-the-administrators-group-contains-any-of-the-specified-members)
   * [Windows VMs with a pending reboot](#windows-vms-with-a-pending-reboot)
