@@ -7,7 +7,7 @@
   
 ## Terms used in this exercise:
    * Intiative
-   * Remediation tasks
+   * Remediation tasks: 
    * Compliant
    * Non-compliant
 
