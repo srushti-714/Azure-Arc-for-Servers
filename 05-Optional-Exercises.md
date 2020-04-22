@@ -120,10 +120,16 @@ This initiative deploys the policy requirements and audits Windows virtual machi
 
 This initiative deploys the policy requirements and audits Windows virtual machines that are not joined to the specified domain. You need to define **domain name** in parameter when you **Assign initiative**.
 
+1. Similar to previous intiative, you can provide the **FQDN (Fully Qualified Domain Name)** in parameter for auditing the VMs that are not joined to the specified domain. 
+
+   ![](./images/arc-1003.png)
+
 ### Audit Windows VMs in which the Administrators group contains any of the specified members
 
 This initiative deploys the policy requirements and audits Windows virtual machines in which the Administrators group contains any of the specified members. 
-Define **Member/Members name** in parameter when you **Assign initiative**.
+1. Define **Member/Members name** in parameter when you **Assign initiative**.
+
+   ![](./images/arc-1004.png)
 
 ### Windows VMs with a pending reboot
 
