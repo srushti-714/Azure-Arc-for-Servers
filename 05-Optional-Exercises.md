@@ -112,7 +112,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
 
 1. On **Parameters** blade provide **vmictimesync** to audit if **vmictimesync** service is not running. After entering the service name parameter click on the next button. Now, you can create the remediation task and everything using the same steps which you have used previously during assignment of **Windows web servers that are not using secure communication protocols (requires IIS on nodes)**
 
-   ![](./images/arc-1001.png)
+   ![](./images/arc-1002.png)
    
 1. If the **vmictimesync** is running in the guest os, then it should show **Non-compliant** otherwise **Compliant**. 
 
