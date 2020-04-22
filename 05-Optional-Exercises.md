@@ -83,11 +83,11 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/azure-arc-1778.png)
  
-1. You will see, following four machines are in **Connected** state. Click on the **winvm** to check the **Compliance**.
+1. You will see, following four machines are in **Connected** state. Click on the **slect-pre-connected-winvm** to check the **Compliance state**.
 
-   ![](./images/arcmachine.png)
+   ![](./images/slect-pre-connected-winvm.png)
    
-1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in Compliant State, because IIS is not installed in this server.
+1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in **Non-cCompliant** State, because IIS is installed and https is not configured for this server.
 
    ![](./images/checkpreconnectedwinvmiiscompliance.png)
    
