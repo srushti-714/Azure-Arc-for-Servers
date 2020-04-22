@@ -7,7 +7,6 @@
   
 # Additional Audit Policies
 
-Here is the few additional policies that you can perform.
   * [Audit Windows VMs that contain certificates expiring within the specified number of days](#audit-windows-vms-that-contain-certificates-expiring-within-the-specified-number-of-days)
   * [Audit on password policy on the machine](#audit-vms-with-insecure-password-security-settings)
   * [Audit Windows VMs that do not have the specified applications installed](#audit-windows-vms-that-do-not-have-the-specified-applications-installed)
