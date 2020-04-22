@@ -87,9 +87,11 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/slect-pre-connected-winvm.png)
    
-1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in **Non-cCompliant** State, because IIS is installed and https is not configured for this server.
+1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in **Non-compliant** State, because IIS is installed but https is not configured for this server.
 
    ![](./images/checkpreconnectedwinvmiiscompliance.png)
+   
+1. To change the **Compliance state**, you can configure the **https** for IIS and then after configuring https compliance state to **Compliant**.
    
 1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this. 
 
