@@ -46,7 +46,7 @@ environment. Select **Azure-ARC-170523**.
 
 1. Select the **Create a Managed Identity** check box and the click **Next** again.
 
-   ![](./images/nexttoparameter.png)
+   ![](./images/createremediationtask.png)
    
 1. Then at the bottom of the **Assign initiative** window click on **Create**.
 
