@@ -52,9 +52,9 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/createsecureinitiative.png)
    
-1. Click on the new **initiative** just created **Audit Windows web servers that are not using secure communication protocols**.
+1. Click on the **initiative** which you just created **Audit Windows web servers that are not using secure communication protocols**.
 
-   ![](./images/createsecureinitiative.png)
+   ![](./images/selectintiativeforcreatingremediationtask.png)
    
 1. Click **Create a Remediation Task** at the top right, it will start the Remediation if it is not started already, if it is already started then it can give error like one remediation task is already running, you can ignore that error and proceed.
 
