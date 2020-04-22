@@ -91,7 +91,7 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/checkpreconnectedwinvmiiscompliance.png)
    
-1. To change the **Compliance state**, you can configure the **https** for IIS and then after configuring https compliance state to **Compliant**.
+1. To change the **Compliance state**, you can configure the **https** for IIS, run the remediation task again and then compliance state will be changed to **Compliant**.
    
 1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this. 
 
