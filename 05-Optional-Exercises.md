@@ -89,7 +89,7 @@ environment. Select **Azure-ARC-170523**.
    
 1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in **Non-compliant** State, because IIS is installed but https is not configured for this server.
 
-   ![](./images/checkpreconnectedwinvmiiscompliance.png)
+   ![](./images/arc-1000.png)
    
 1. To change the **Compliance state**, you can configure the **https** for IIS, run the remediation task again and then compliance state will be changed to **Compliant**.
    
