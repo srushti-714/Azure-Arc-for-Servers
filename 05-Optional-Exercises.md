@@ -5,7 +5,7 @@
   * [Windows VMs in which the Administrators group contains any of the specified members](#audit-windows-vms-in-which-the-administrators-group-contains-any-of-the-specified-members)
   * [Windows VMs with a pending reboot](#windows-vms-with-a-pending-reboot)
   
-# # Additional Audit Policies
+# Additional Audit Policies
 
 Here is the few additional policies that you can perform.
   * [Audit Windows VMs that contain certificates expiring within the specified number of days](#audit-windows-vms-that-contain-certificates-expiring-within-the-specified-number-of-days)
