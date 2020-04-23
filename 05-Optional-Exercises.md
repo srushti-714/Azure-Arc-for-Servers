@@ -87,11 +87,47 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/slect-pre-connected-winvm.png)
    
-1. Now, click on the **Policies** and check the **Compliance** state for the server. It should be in **Non-compliant** State, because IIS is installed but https is not configured for this server.
+1. Now, click on the **Policies** and check the **Compliance** state for the server. It will be in **Non-compliant** State. To check, why it is Non-compliant click on **Audit Windows web servers that are not using secure communication protocols**.
 
    ![](./images/arc-1000.png)
    
-1. To change the **Compliance state**, you can configure the **https** for IIS, run the remediation task again and then compliance state will be changed to **Compliant**.
+1. Now, click on **Show audit results from Windows web servers that are not using secure communication protocols**.
+   
+   ![](./images/arc-1005.png)
+   
+1. You will see **Compliance reason** coloumn for **pre-connected-winvm**, under that click on **Details**.
+
+   ![](./images/arc-1006.png)
+   
+1. Click on the link shown below **Existence condition**. It will open a new tab in browser. 
+
+   ![](./images/arc-1007.png)
+      
+1. Switch to the newly opened tab in your web browser, you can see the following Reason listed.
+
+   **Reason**
+   ```
+      Could not find any secure TLS protocol version enabled on this web server. 
+      Displaying current status of protocols: 
+      SSL 2.0 - Absent 
+      SSL 3.0 - Absent 
+      TLS 1.0 - Absent 
+      PCT 1.0 - Absent 
+      Multi-Protocol Unified Hello - Absent 
+      TLS 1.1 - Absent 
+      TLS 1.2 - Absent 
+   ```
+   ![](./images/arc-1008.png)
+   
+1. To change the **Compliance state** to **Complaint**, you can enable the following secure TLS protocol version on web server (pre-connected-winvm).
+    * SSL 2.0  
+    * SSL 3.0  
+    * TLS 1.0
+    * TLS 1.1
+    * TLS 1.2 
+    * PCT 1.0 
+    * Multi-Protocol Unified Hello 
+
    
 1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this. 
 
@@ -182,9 +218,12 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * Then from **Available Definitions** search box type **password**
    * You will see **Audit Windows VMs that do not have the specified applications installed**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
-   * On **Parameters** tab, again click on **Next**.
+   * On **Parameters** tab, provide the application name for which you want to audit; ie: **Notepad++**
+   * Now, click on **Next**.
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
+   
+If application is installed in the system, then it 
 
 ### Audit Windows VMs that have the specified applications installed
 
