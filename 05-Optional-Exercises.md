@@ -158,13 +158,47 @@ This initiative deploys the policy requirements and audits Windows virtual machi
 
 This initiative deploys the policy requirements and audits virtual machines with insecure password security settings.
 
+You can Assign this initiative very similar to the very first initiative which you have assigned in this exercise.
+
+1. Go the the Resource group, then click on the **Policies**, then click on **Assign initiative**. 
+   * Leave the **Scope** and **Exclusions** default
+   * Under basic, choose ellipse ... for selecting **Initiative definition**
+   * Then from **Available Definitions** search box type **password**
+   * You will see **Audit VMs with insecure password security settings**, click on that and then choose the Select button.
+   * Now, from the buttom of the **Basics** page click on the **Next button**.
+   * On **Parameters** tab, again click on **Next**.
+   * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
+   * Now, click on **Review + create** and then **Create**.
+   
+  
+
 ### Audit Windows VMs that do not have the specified applications installed
 
 This initiative deploys the policy requirements and audits Windows virtual machines that do not have the specified applications installed. Here you need to define  application name in parameter for the initiative to audit if the application is not installed in the VMs. You can check for **Notepad++** becouse it is installed in pre-connected-winvm already.
 
+1. Go the the Resource group, then click on the **Policies**, then click on **Assign initiative**. 
+   * Leave the **Scope** and **Exclusions** default
+   * Under basic, choose ellipse ... for selecting **Initiative definition**
+   * Then from **Available Definitions** search box type **password**
+   * You will see **Audit Windows VMs that do not have the specified applications installed**, click on that and then choose the Select button.
+   * Now, from the buttom of the **Basics** page click on the **Next button**.
+   * On **Parameters** tab, again click on **Next**.
+   * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
+   * Now, click on **Review + create** and then **Create**.
+
 ### Audit Windows VMs that have the specified applications installed
 
 This initiative deploys the policy requirements and audits Windows virtual machines that have the specified applications installed. It should give the opposite Compliace state in complare to previous one if you are checking for the same application **Notepad++**
+
+1. Go the the Resource group, then click on the **Policies**, then click on **Assign initiative**. 
+   * Leave the **Scope** and **Exclusions** default
+   * Under basic, choose ellipse ... for selecting **Initiative definition**
+   * Then from **Available Definitions** search box type **password**
+   * You will see **Audit Windows VMs that have the specified applications installed**, click on that and then choose the Select button.
+   * Now, from the buttom of the **Basics** page click on the **Next button**.
+   * On **Parameters** tab, again click on **Next**.
+   * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
+   * Now, click on **Review + create** and then **Create**.
 
 ### Inherit a tag from the resource group if missing
 
@@ -172,9 +206,12 @@ It is not an intiative, it is a single policy. So, you need to go in Assign Poli
 
 Adds the specified tag with its value from the parent resource group when any resource missing this tag is created or updated. Existing resources can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed.
 
-
-
-
- 
-
-
+1. Go the the Resource group, then click on the **Policies**, then click on **Assign policy**. 
+   * Leave the **Scope** and **Exclusions** default
+   * Under basic, choose ellipse ... for selecting **Initiative definition**
+   * Then from **Available Definitions** search box type **password**
+   * You will see **Inherit a tag from the resource group if missing**, click on that and then choose the Select button.
+   * Now, from the buttom of the **Basics** page click on the **Next button**.
+   * On **Parameters** tab, again click on **Next**.
+   * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
+   * Now, click on **Review + create** and then **Create**.
