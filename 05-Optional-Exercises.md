@@ -204,7 +204,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
 
    ![](./images/arc-1011.png)
    
-2. To change the **compliace state** to **Compliant**, edit the intiative and change **Include expired certificates** value to **false**. So it whould not consider the already expired certificates and state would change to **Compliant** after few minutes, you may have to create new remediation.
+2. To change the **compliace state** to **Compliant**, edit the intiative and change **Include expired certificates** value to **false**. So it whould not consider the already expired certificates and state would change to **Compliant** in approx 30 minutes, you may have to create new remediation.
 
      ![](./images/arc-1012.png)
 
