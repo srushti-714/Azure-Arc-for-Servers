@@ -171,7 +171,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * You will see **Windows VMs that are not joined to the specified domain**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
    * Define **FQDN value** in **Parameter** for **Domain Name (FQDN)** and then click on **Next** from buttom.
-     * Domain Name (FQDN) : **contoso.com**
+     * Domain Name (FQDN) : ``` contoso.com ```
      
      ![](./images/arc-1013.png)
      
@@ -194,7 +194,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * You will see **Audit Windows VMs in which the Administrators group contains any of the specified members**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
    * Define **Members to exclude value** in **Parameter** and then click on **Next** from buttom.
-     * Members to exclude : **Administrator**
+     * Members to exclude : ``` Administrator ```
      
       ![](./images/arc-1004.png)
      
@@ -290,7 +290,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * Then from **Available Definitions** search box type **password**
    * You will see **Audit Windows VMs that do not have the specified applications installed**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
-   * On **Parameters** tab, provide the application name for which you want to audit; ie: **Notepad++**
+   * On **Parameters** tab, provide the application name for which you want to audit; ie: ``` Notepad++ ```
    * Now, click on **Next**.
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
@@ -313,7 +313,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * Then from **Available Definitions** search box type **password**
    * You will see **Audit Windows VMs that have the specified applications installed**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
-   * On Parameters tab, provide the application name for which you want to audit; ie: Notepad++
+   * On Parameters tab, provide the application name for which you want to audit; ie: ``` Notepad++ ```
    * Now, click on **Next**.
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
@@ -327,8 +327,8 @@ It is not an intiative, it is a single policy. So, you need to go in Assign Poli
 Adds the specified tag with its value from the parent resource group when any resource missing this tag is created or updated. Existing resources can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed.
 
 1. For this Policy first go to the **resource Group** and add a **Tag** with following key/value pair. So, when we apply this policy it will automatically apply this tag to all the resources under this resource group.
-   * Tag Name: ***Owner***
-   * Tag Value: ***Your Name***
+   * Tag Name: ``` Owner ```
+   * Tag Value:  ``` Your Name ```
 
 1. Go the the Resource group, then click on the **Policies**, then click on **Assign policy**. 
    * Leave the **Scope** and **Exclusions** default
@@ -337,7 +337,7 @@ Adds the specified tag with its value from the parent resource group when any re
    * You will see **Inherit a tag from the resource group if missing**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
    * On **Parameters** tab, give the Tag name which you want to inherit to resources from resource group and then click on **Next**.
-      * Tag Name: Owner
+      * Tag Name: ``` Owner ```
       
        ![](./images/arc-1009.png)
      
