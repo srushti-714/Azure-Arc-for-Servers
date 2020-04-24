@@ -249,7 +249,9 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
    
-If application is installed in the system, then it 
+2. If application is installed in the system, then it shoud show compliant.
+   * In **pre-connected-winvm Notepad++** is already installed, so it will show the pre-connected-winvm as compliant for this policy.
+   * In **winvm Notepad++** is not installed so it will show the result as **Non-compliant**
 
 ## Audit Windows VMs that have the specified applications installed
 
@@ -265,6 +267,8 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * Now, click on **Next**.
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
+   
+2. Compliance State of this would be exactly opposite to the [Audit Windows VMs that do not have the specified applications installed](#audit-windows-vms-that-do-not-have-the-specified-applications-installed)
 
 ## Inherit a tag from the resource group if missing
 
@@ -272,6 +276,11 @@ It is not an intiative, it is a single policy. So, you need to go in Assign Poli
 
 Adds the specified tag with its value from the parent resource group when any resource missing this tag is created or updated. Existing resources can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed.
 
+For this Policy first go to the **resource Group** and add a **Tag** with following key/value pair. So, when we apply this policy it will automatically apply this tag to all the resources under this resource group.
+ ```
+  Tag Name: **Owner**
+  Tag Value: **Your Name**
+```
 1. Go the the Resource group, then click on the **Policies**, then click on **Assign policy**. 
    * Leave the **Scope** and **Exclusions** default
    * Under basic, choose ellipse ... for selecting **Policy definition**
@@ -279,8 +288,10 @@ Adds the specified tag with its value from the parent resource group when any re
    * You will see **Inherit a tag from the resource group if missing**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
    * On **Parameters** tab, give the Tag name which you want to inherit to resources from resource group and then click on **Next**.
-     
+      * Tag Name: Owner
      ![](./images/arc-1009.png)
      
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
+   
+ 2. After 5-10 Minutes check the resource Tags and you will see the tag **Owner** is replicated.
