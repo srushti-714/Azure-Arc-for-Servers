@@ -24,14 +24,15 @@
 In this task, you will create initialive assignment **Audit Windows web servers that are not using secure communication protocols**, which will audit the VM as **Compliant** and **Non-compliant**. This initiative have two policy definations one is to install the pre-requsite to the guest os and other is to audit the compliance status.
 
 You can enable/disable the following secure TLS protocol versions on web server (pre-connected-winvm) to experience the changes in **Compliance state**.
-    * SSL 2.0  
-    * SSL 3.0  
-    * TLS 1.0
-    * TLS 1.1
-    * TLS 1.2 
-    * PCT 1.0 
-    * Multi-Protocol Unified Hello 
-
+```
+    SSL 2.0  
+    SSL 3.0  
+    TLS 1.0
+    TLS 1.1
+    TLS 1.2 
+    PCT 1.0 
+    Multi-Protocol Unified Hello 
+```
 You will apply the **Initiatives** at resource group and it will audit all the guest VMs within that resource group.
 
 1. In your Azure portal, browse through the **Resource groups**. From the navigate panel, select **Resource groups**.
