@@ -263,7 +263,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
 
 This initiative deploys the policy requirements and audits virtual machines with insecure password security settings.
 
-You can Assign this initiative very similar to the very first initiative which you have assigned in this exercise.
+You can Assign this initiative very similar to the very first initiative which you have assigned in this exercise. This initiative is combination of more then 3-4 policies.
 
 1. Go the the Resource group, then click on the **Policies**, then click on **Assign initiative**. 
    * Leave the **Scope** and **Exclusions** default
@@ -273,8 +273,12 @@ You can Assign this initiative very similar to the very first initiative which y
    * Now, from the buttom of the **Basics** page click on the **Next button**.
    * On **Parameters** tab, again click on **Next**.
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
-   * Now, click on **Review + create** and then **Create**.   
-  
+   * Now, click on **Review + create** and then **Create**.
+   
+1. If it is **Non-compliant** then go to the details and check the reason on Non-compliance. Lets check the reason for policy **Show audit results from Windows VMs that do not have a maximum password age of 70 days**. Click on this polcy name as shown in resource group.
+
+   ![](./images/arc-1018.png)
+
 
 ## Audit Windows VMs that do not have the specified applications installed
 
@@ -291,9 +295,13 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
    
-2. If application is installed in the system, then it shoud show compliant.
+1. If application is installed in the system, then it shoud show compliant.
    * In **pre-connected-winvm Notepad++** is already installed, so it will show the pre-connected-winvm as compliant for this policy.
-   * In **winvm Notepad++** is not installed so it will show the result as **Non-compliant**
+   * In **winvm Notepad++** is not installed so it will show the result as **Non-compliant**. Check the reason of **winvm**.
+     
+     ![](./images/arc-1017.png)
+
+1. You can also install and uninstall to make the change in compliant state, it can take approx 30 minues after duing these chnages in server.
 
 ## Audit Windows VMs that have the specified applications installed
 
@@ -318,11 +326,10 @@ It is not an intiative, it is a single policy. So, you need to go in Assign Poli
 
 Adds the specified tag with its value from the parent resource group when any resource missing this tag is created or updated. Existing resources can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed.
 
-For this Policy first go to the **resource Group** and add a **Tag** with following key/value pair. So, when we apply this policy it will automatically apply this tag to all the resources under this resource group.
- ```
-  Tag Name: **Owner**
-  Tag Value: **Your Name**
-```
+1. For this Policy first go to the **resource Group** and add a **Tag** with following key/value pair. So, when we apply this policy it will automatically apply this tag to all the resources under this resource group.
+   * Tag Name: ***Owner***
+   * Tag Value: ***Your Name***
+
 1. Go the the Resource group, then click on the **Policies**, then click on **Assign policy**. 
    * Leave the **Scope** and **Exclusions** default
    * Under basic, choose ellipse ... for selecting **Policy definition**
@@ -331,6 +338,7 @@ For this Policy first go to the **resource Group** and add a **Tag** with follow
    * Now, from the buttom of the **Basics** page click on the **Next button**.
    * On **Parameters** tab, give the Tag name which you want to inherit to resources from resource group and then click on **Next**.
       * Tag Name: Owner
+      
      ![](./images/arc-1009.png)
      
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
