@@ -187,6 +187,19 @@ Here is the few additional policies that you can perform.
 
 This initiative deploys the policy requirements and audits Windows virtual machines that contain certificates expiring within the specified number of days.
 
+1. Go the the Resource group, then click on the **Policies**, then click on **Assign initiative**. 
+   * Leave the **Scope** and **Exclusions** default
+   * Under basic, choose ellipse ... for selecting **Initiative definition**
+   * Then from **Available Definitions** search box type **certificates**
+   * You will see **Audit Windows VMs that contain certificates expiring within the specified number of days**, click on that and then choose the Select button.
+   * Now, from the buttom of the **Basics** page click on the **Next button**.
+   * On **Parameters** tab, change **Include expired certificates** value from **false** to **true** from dropdown and then click on **Next** from buttom. 
+   
+     ![](./images/arc-1010.png)
+     
+   * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
+   * Now, click on **Review + create** and then **Create**.
+
 ### Audit VMs with insecure password security settings
 
 This initiative deploys the policy requirements and audits virtual machines with insecure password security settings.
