@@ -245,9 +245,12 @@ Adds the specified tag with its value from the parent resource group when any re
 1. Go the the Resource group, then click on the **Policies**, then click on **Assign policy**. 
    * Leave the **Scope** and **Exclusions** default
    * Under basic, choose ellipse ... for selecting **Policy definition**
-   * Then from **Available Definitions** search box type **password**
+   * Then from **Available Definitions** search box type **Inherit a tag from the resource group if missing**
    * You will see **Inherit a tag from the resource group if missing**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
-   * On **Parameters** tab, again click on **Next**.
+   * On **Parameters** tab, give the Tag name which you want to inherit to resources from resource group and then click on **Next**.
+     
+     ![](./images/arc-1009.png)
+     
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
