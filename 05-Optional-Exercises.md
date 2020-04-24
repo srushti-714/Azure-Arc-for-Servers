@@ -103,7 +103,7 @@ environment. Select **Azure-ARC-170523**.
 
    ![](./images/arc-1007.png)
       
-1. Switch to the newly opened tab in your web browser, you can see the following Reason listed.
+1. Switch to the newly opened tab in your web browser, you can see the following Reason listed. Similarly, you can check the Non-compliant reason for rest of the policies in this exercise.
 
    **Reason**
    ```
@@ -127,9 +127,6 @@ environment. Select **Azure-ARC-170523**.
     * TLS 1.2 
     * PCT 1.0 
     * Multi-Protocol Unified Hello 
-
-   
-1. Similarly, you can check the **Compliance** state for the Pre-connected-winvm server and it should be **Non-compliant**, becouse IIS server is installed in this. 
 
 
 ### Windows VMs on which the specified services are not installed and 'Running' 
