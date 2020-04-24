@@ -138,7 +138,7 @@ environment. Select **Azure-ARC-170523**.
     * Multi-Protocol Unified Hello 
 
 
-### Windows VMs on which the specified services are not installed and 'Running' 
+## Windows VMs on which the specified services are not installed and 'Running' 
 
 This initiative deploys the policy requirements and audits Windows virtual machines on which the specified services are not installed and 'Running'.
 
@@ -158,7 +158,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    
 1. If the **vmictimesync** is running in the guest os, then it should show **Non-compliant** otherwise **Compliant**. 
 
-### Windows VMs that are not joined to the specified domain
+## Windows VMs that are not joined to the specified domain
 
 This initiative deploys the policy requirements and audits Windows virtual machines that are not joined to the specified domain. You need to define **domain name** in parameter when you **Assign initiative**.
 
@@ -166,14 +166,14 @@ This initiative deploys the policy requirements and audits Windows virtual machi
 
    ![](./images/arc-1003.png)
 
-### Audit Windows VMs in which the Administrators group contains any of the specified members
+## Audit Windows VMs in which the Administrators group contains any of the specified members
 
 This initiative deploys the policy requirements and audits Windows virtual machines in which the Administrators group contains any of the specified members. 
 1. Define **Member/Members name** in parameter when you **Assign initiative**.
 
    ![](./images/arc-1004.png)
 
-### Windows VMs with a pending reboot
+## Windows VMs with a pending reboot
 
 This initiative deploys the policy requirements and audits Windows virtual machines with a pending reboot.
 
@@ -192,7 +192,7 @@ Here is the few additional policies that you can perform.
   * Audit Windows VMs that have the specified applications installed
   * Inherit a tag from the resource group if missing
   
-### Audit Windows VMs that contain certificates expiring within the specified number of days
+## Audit Windows VMs that contain certificates expiring within the specified number of days
 
 This initiative deploys the policy requirements and audits Windows virtual machines that contain certificates expiring within the specified number of days.
 
@@ -217,7 +217,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
 
      ![](./images/arc-1012.png)
 
-### Audit VMs with insecure password security settings
+## Audit VMs with insecure password security settings
 
 This initiative deploys the policy requirements and audits virtual machines with insecure password security settings.
 
@@ -234,7 +234,7 @@ You can Assign this initiative very similar to the very first initiative which y
    * Now, click on **Review + create** and then **Create**.   
   
 
-### Audit Windows VMs that do not have the specified applications installed
+## Audit Windows VMs that do not have the specified applications installed
 
 This initiative deploys the policy requirements and audits Windows virtual machines that do not have the specified applications installed. Here you need to define  application name in parameter for the initiative to audit if the application is not installed in the VMs. You can check for **Notepad++** becouse it is installed in pre-connected-winvm already.
 
@@ -251,7 +251,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    
 If application is installed in the system, then it 
 
-### Audit Windows VMs that have the specified applications installed
+## Audit Windows VMs that have the specified applications installed
 
 This initiative deploys the policy requirements and audits Windows virtual machines that have the specified applications installed. It should give the opposite Compliace state in complare to previous one if you are checking for the same application **Notepad++**
 
@@ -266,7 +266,7 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
 
-### Inherit a tag from the resource group if missing
+## Inherit a tag from the resource group if missing
 
 It is not an intiative, it is a single policy. So, you need to go in Assign Policy and search for this to apply on resource group.
 
