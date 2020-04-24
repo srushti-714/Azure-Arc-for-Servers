@@ -201,8 +201,7 @@ You can Assign this initiative very similar to the very first initiative which y
    * Now, from the buttom of the **Basics** page click on the **Next button**.
    * On **Parameters** tab, again click on **Next**.
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
-   * Now, click on **Review + create** and then **Create**.
-   
+   * Now, click on **Review + create** and then **Create**.   
   
 
 ### Audit Windows VMs that do not have the specified applications installed
@@ -232,7 +231,8 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    * Then from **Available Definitions** search box type **password**
    * You will see **Audit Windows VMs that have the specified applications installed**, click on that and then choose the Select button.
    * Now, from the buttom of the **Basics** page click on the **Next button**.
-   * On **Parameters** tab, again click on **Next**.
+   * On Parameters tab, provide the application name for which you want to audit; ie: Notepad++
+   * Now, click on **Next**.
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
 
