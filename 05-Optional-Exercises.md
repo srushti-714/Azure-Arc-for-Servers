@@ -202,11 +202,9 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    
 1. You will see the audits are **Non-compliant**. When you will check the reason of **non-compliant**, you will find it is becouse of already expired certificates.
 
-
+   ![](./images/arc-1011.png)
    
 2. To change the **compliace state** to **Compliant**, edit the intiative and change **Include expired certificates** value to **false**. So it whould not consider the already expired certificates and state would change to **Compliant** after few minutes, you may have to create new remediation.
-
-     ![](./images/arc-1011.png)
 
 ### Audit VMs with insecure password security settings
 
