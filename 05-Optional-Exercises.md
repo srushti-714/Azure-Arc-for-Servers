@@ -157,31 +157,73 @@ This initiative deploys the policy requirements and audits Windows virtual machi
    ![](./images/arc-1002.png)
    
 1. If the **vmictimesync** is running in the guest os, then it should show **Non-compliant** otherwise **Compliant**. 
+1. If it is **Non-Compliant**, then you can go to the details and check the reason of compliance state using the exactly same steps which you used in the previous Policy.
+1. If it is in compliant state it won't show the reason. It means application is installed and running.
 
 ## Windows VMs that are not joined to the specified domain
 
 This initiative deploys the policy requirements and audits Windows virtual machines that are not joined to the specified domain. You need to define **domain name** in parameter when you **Assign initiative**.
 
-1. Similar to previous intiative, you can provide the **FQDN (Fully Qualified Domain Name)** in parameter for auditing the VMs that are not joined to the specified domain. 
-
-   ![](./images/arc-1003.png)
+1. Go the the Resource group, then click on the **Policies**, then click on **Assign initiative**. 
+   * Leave the **Scope** and **Exclusions** default
+   * Under basic, choose ellipse ... for selecting **Initiative definition**
+   * Then from **Available Definitions** search box type **certificates**
+   * You will see **Windows VMs that are not joined to the specified domain**, click on that and then choose the Select button.
+   * Now, from the buttom of the **Basics** page click on the **Next button**.
+   * Define **FQDN value** in **Parameter** for **Domain Name (FQDN)** and then click on **Next** from buttom.
+     * Domain Name (FQDN) : **contoso.com**
+     
+     ![](./images/arc-1013.png)
+     
+   * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
+   * Now, click on **Review + create** and then **Create**.
+   
+1. Now, you can go to the details and check the **Non-Compliant** reason. 
+   
+   Reason: The Domain Name the VM is currently joined to 'WORKGROUP' does not match the one specified by the User 'archost' ..
+   
+   ![](./images/arc-1014.png)   
 
 ## Audit Windows VMs in which the Administrators group contains any of the specified members
 
 This initiative deploys the policy requirements and audits Windows virtual machines in which the Administrators group contains any of the specified members. 
-1. Define **Member/Members name** in parameter when you **Assign initiative**.
+1. Go the the Resource group, then click on the **Policies**, then click on **Assign initiative**. 
+   * Leave the **Scope** and **Exclusions** default
+   * Under basic, choose ellipse ... for selecting **Initiative definition**
+   * Then from **Available Definitions** search box type **certificates**
+   * You will see **Audit Windows VMs in which the Administrators group contains any of the specified members**, click on that and then choose the Select button.
+   * Now, from the buttom of the **Basics** page click on the **Next button**.
+   * Define **Members to exclude value** in **Parameter** and then click on **Next** from buttom.
+     * Members to exclude : **Administrator**
+     
+      ![](./images/arc-1004.png)
+     
+   * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
+   * Now, click on **Review + create** and then **Create**.
+   
+1. It should show the **pre-connected-winvm** as **compliant** becouse user/member **Administrator** is a member of **Administrators group**
 
-   ![](./images/arc-1004.png)
+   ![](./images/arc-1015.png)   
 
 ## Windows VMs with a pending reboot
 
 This initiative deploys the policy requirements and audits Windows virtual machines with a pending reboot.
 
-You can see the **Compliance state** for all the Initiatives assigned above by going to the Arc Server Manager. Search for **Azure Arc** from the Azure resources, services search box from the top of the portal and then click on Azure Arc. After this, select **Manage Servers**.
+1. Go the the Resource group, then click on the **Policies**, then click on **Assign initiative**. 
+   * Leave the **Scope** and **Exclusions** default
+   * Under basic, choose ellipse ... for selecting **Initiative definition**
+   * Then from **Available Definitions** search box type **certificates**
+   * You will see **Audit Windows VMs that contain certificates expiring within the specified number of days**, click on that and then choose the Select button.
+   * Now, from the buttom of the **Basics** page click on the **Next button**.
+   * On **Parameters** tab, leave default and click on **Next**.     
+   * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
+   * Now, click on **Review + create** and then **Create**.
 
-You can now go to individual Arc Machines and then click on policy to see the **Compliance state**.
+1. You can now go to individual Arc Machines (**pre-connected-winvm** and **winvm**) and then click on policy to see the **Compliance state**. If it is **Non-compliant** then go to the details and check the reason on Non-compliance.
 
-   ![](./images/checkallinitiatives.png)
+2. Reason could be be anything like windows update, any application and service installation reboot is pending.
+      
+   ![](./images/arc-1016.png)   
 
 # Additional Audit Policies
 
