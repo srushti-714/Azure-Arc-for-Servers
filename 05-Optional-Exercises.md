@@ -339,7 +339,7 @@ Adds the specified tag with its value from the parent resource group when any re
    * On **Parameters** tab, give the Tag name which you want to inherit to resources from resource group and then click on **Next**.
       * Tag Name: Owner
       
-     ![](./images/arc-1009.png)
+       ![](./images/arc-1009.png)
      
    * On **Remediation** tab, click on the **Create a remediation task** to mark the checkbox.
    * Now, click on **Review + create** and then **Create**.
