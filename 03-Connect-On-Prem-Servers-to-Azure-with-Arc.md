@@ -1,8 +1,7 @@
-# Exercise 3: Connect On-Prem Servers to Azure with Arc
-
+# Exercise 3: Onboard Kubernetes Cluster to Azure Arc
 Azure Arc extends Azure Resource Manager capabilities to Linux and Windows servers, as well as Kubernetes clusters on any infrastructure across on-premises, multi-cloud, and edge. With Azure Arc, customers can also run Azure data services anywhere, realizing the benefits of cloud innovation, including always up-to-date data capabilities, deployment in seconds (rather than hours), and dynamic scalability on any infrastructure. Azure Arc for servers is currently in public preview.
 
-## Task 1: Login and become familiar with Hyper-V Infrastructure
+## Task 1: Connect the cluster to Azure Arc
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a virtual machine. Each *virtual machine* acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.
 In this task, you will walk through **on-prem** environment which is hosted on **Hyper-V**. You will find four virtual machines hosted on Hyper-V server.	
 1. Find the ARCHOST VM details on lab details page:
@@ -18,7 +17,7 @@ In this task, you will walk through **on-prem** environment which is hosted on *
 
    ![](./images/azure-arc-1784.png) 
 
-## Task 2: Connect a Windows Server Virtual Machine to Azure Arc
+## Task 2: Verify the cluster from Azure Portal
 Azure Arc for servers (preview) allows you to manage your Windows and Linux machines hosted outside of Azure on your corporate network or other cloud provider, similarly to how you manage native Azure virtual machines. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID, is managed as part of a resource group inside a subscription, and benefits from standard Azure constructs such as Azure Policy and applying tags.
 
 In this task, you will connect the **windows server machine** to **Azure ARC**. There are multiple ways to do this.
@@ -44,19 +43,3 @@ We will use the 2nd method to connect our **windows machine** to Azure.
      * Subscription and tenant id
      
 After getting these values, it is creating **pscredential** to login in **Azure PowerShell** using service principle and then, creating a script block to run that block inside the **machines hosted on Hyper-V**. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARCHOST vm with computer name/private ip of WinVm.
-
-## Task 3: Connect a Linux Virtual Machine to Azure Arc
-In this task, we will connect the Linux machine to Azure Arc. 
-1. Open windows PowerShell and run the following command and pass the **UbuntuVm** ip in powershell console when it prompt for **IP Address of Linux machine**
-     * UbuntuVm IP: **192.168.0.7**
-    ```
-    cd C:\LabFiles\
-    $ip = Read-Host -Prompt 'IP Address of Linux machine'
-    .\ArcAgentLinux.bat $ip
-    ```
-   ![](./images/azure-arc-1331.png)
-
-2. These commands will open a **Putty session** for **UbuntuVm** and login to the machine and run the Azure Arc connect commands automatically. Once the machine is **onboarded** to Azure Arc, you can see the following message in **Putty terminal**:
-**info msg= “Successfully Onboarded Resource to Azure”**
-
-   ![](./images/azure-arc-1332.png)
