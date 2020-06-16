@@ -1,4 +1,4 @@
-# Exercise 4: Azure Governance for Arc Connected Machine
+# Exercise 5: Azure Governance for Arc Connected Machine
 In this exercise, you will perform Role assignment, Policy assignment, Tag the Hybrid compute machines and check Activity logs of resource group and servers.
 
 Using custom roles you can manage the access to the Azure Arc servers and assign the access of Azure Arc servers to any server auditor, Onboard Arc servers, Monitor Admin to the person in your company.
