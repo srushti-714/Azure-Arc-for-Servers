@@ -1,8 +1,8 @@
-# Exercise 2: Getting started with Azure Arc
-In the provided lab environment, you would already have one Windows Server running on-prem in a **Hyper-V** machine connected through Azure Arc. In this exercise, we’ll explore **pre-connected** Azure Arc resources.
+# Exercise 2: Getting started with On-Prem Kubernetes Cluster
+In the provided lab environment, you would already have one Windows 10 machine running with Kubernetes Cluster already deployed and running. In this exercise, we’ll connect to the VM and check the existing Kubernetes Cluster
 
-## Task 1: Browse through the Arc pre-connected machine in Azure Portal.
-In this lab, two on-prem servers one **windows**, and **Linux** are pre-connected to Azure Arc and you can access the pre-connected server and play around those. 
+## Task 1: Verify existing Kubernetes Cluster
+In this task, you will check the existing Kubernetes cluster and verify that the cluster is up and running. 
 1. On Azure portal, search for **Azure Arc** from search box and then select the **Machines – Azure Arc**.
 
    ![](./images/azure-arc-1778.png) 
